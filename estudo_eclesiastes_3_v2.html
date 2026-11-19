@@ -1,0 +1,2531 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eclesiastes 3 — Tudo Tem o Seu Tempo | Estudo Bíblico Ilustrado & Infográfico de Síntese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg-parchment: #FAF7F2;
+    --bg-card: #FFFFFF;
+    --bg-subtle: #F2ECE1;
+    --navy: #1B2A4A;
+    --navy-dark: #101A2E;
+    --gold: #B87D3B;
+    --gold-light: #E8D5B7;
+    --olive: #4A5D4E;
+    --olive-light: #EAF0EB;
+    --terracotta: #9E4732;
+    --ink: #1E242B;
+    --muted: #5A6370;
+    --border: #E2D9C8;
+    --shadow-sm: 0 4px 16px rgba(27, 42, 74, 0.06);
+    --shadow-md: 0 12px 32px rgba(27, 42, 74, 0.10);
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+    --font-scale: 1;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: calc(16px * var(--font-scale));
+  }
+
+  body {
+    background-color: var(--bg-parchment);
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Reading Progress Bar */
+  .progress-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(27, 42, 74, 0.08);
+    z-index: 1200;
+  }
+
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--gold), var(--navy));
+    transition: width 0.12s ease-out;
+  }
+
+  /* Sticky Top Header */
+  .topbar {
+    position: sticky;
+    top: 4px;
+    z-index: 1000;
+    background: rgba(250, 247, 242, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .topbar-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: var(--navy);
+  }
+
+  .brand-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--gold-light);
+    display: grid;
+    place-items: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    border: 1.5px solid var(--gold);
+  }
+
+  .brand-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+  }
+
+  .brand-sub {
+    display: block;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--navy);
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: var(--navy);
+    color: #fff;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .btn-tool {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--navy);
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.35rem 0.65rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-tool:hover {
+    border-color: var(--gold);
+    background: var(--bg-subtle);
+  }
+
+  .btn-primary {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+  }
+
+  .btn-primary:hover {
+    background: var(--navy-dark);
+    color: var(--gold-light);
+  }
+
+  /* Hero Section */
+  .hero {
+    background: radial-gradient(circle at top right, rgba(184, 125, 59, 0.14), transparent 55%),
+                linear-gradient(165deg, var(--navy-dark) 0%, var(--navy) 62%, #243963 100%);
+    color: #fff;
+    padding: 4rem 1.5rem 3.5rem;
+    border-bottom: 4px solid var(--gold);
+  }
+
+  .hero-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(232, 213, 183, 0.28);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4.5vw, 3.75rem);
+    line-height: 1.08;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+
+  .hero-lead {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.90);
+    margin-bottom: 1.5rem;
+    max-width: 64ch;
+  }
+
+  .thesis-box {
+    background: rgba(255, 255, 255, 0.07);
+    border-left: 4px solid var(--gold);
+    padding: 1rem 1.25rem;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .thesis-box strong {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold-light);
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-cta-row {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.72rem 1.25rem;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+  }
+
+  .btn-hero-gold {
+    background: var(--gold);
+    color: #fff;
+  }
+
+  .btn-hero-gold:hover {
+    background: #9f692d;
+  }
+
+  .btn-hero-outline {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #fff;
+  }
+
+  .btn-hero-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .hero-art-card {
+    background: rgba(250, 247, 242, 0.98);
+    color: var(--ink);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gold-light);
+  }
+
+  .hero-art-caption {
+    margin-top: 0.65rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: center;
+    font-style: italic;
+  }
+
+  /* Main Container */
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  /* Deliverable Banner / Section Headers */
+  .deliverable-banner {
+    background: linear-gradient(135deg, var(--bg-subtle) 0%, #FFFDF9 100%);
+    border: 1.5px solid var(--gold);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .deliverable-tag {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--gold-light);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.28rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 0.65rem;
+  }
+
+  .part-header {
+    margin: 3.5rem 0 1.75rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 2px solid var(--gold-light);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .part-kicker {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.85rem, 3.2vw, 2.55rem);
+    color: var(--navy);
+    line-height: 1.18;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+    color: var(--navy);
+    margin: 2rem 0 0.65rem;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-size: 1.02rem;
+    color: var(--olive);
+    font-weight: 700;
+    margin: 1.15rem 0 0.4rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  ul, ol {
+    margin: 0.5rem 0 1.25rem 1.4rem;
+  }
+
+  li {
+    margin-bottom: 0.42rem;
+  }
+
+  .scripture-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.32rem;
+    font-style: italic;
+    color: var(--navy);
+    background: var(--bg-subtle);
+    border-left: 4px solid var(--gold);
+    padding: 1rem 1.35rem;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin: 1.25rem 0;
+  }
+
+  .scripture-quote cite {
+    display: block;
+    font-style: normal;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    margin-top: 0.35rem;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.65rem;
+    margin-bottom: 1.6rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Infographic Grid */
+  .info-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.15rem;
+    margin: 1.25rem 0 1.75rem;
+  }
+
+  .mov-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--navy);
+    border-radius: var(--radius-md);
+    padding: 1.15rem;
+  }
+
+  .mov-card.m2 { border-top-color: var(--gold); }
+  .mov-card.m3 { border-top-color: var(--olive); }
+
+  .mov-verse {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+  }
+
+  .lexicon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.95rem;
+    margin: 1.25rem 0;
+  }
+
+  .lex-item {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.95rem;
+  }
+
+  .lex-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.35rem;
+  }
+
+  .lex-translit {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 0.95rem;
+  }
+
+  /* Tables */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 1.25rem 0 1.75rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: #fff;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  th {
+    background: var(--navy);
+    color: #fff;
+    text-align: left;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+  }
+
+  td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td {
+    background: #FCFBF8;
+  }
+
+  /* Interactive Polarities Wheel + Matrix */
+  .polarities-workbench {
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
+    gap: 1.75rem;
+    align-items: start;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .wheel-panel {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 4.5rem;
+  }
+
+  .wheel-svg {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .wheel-slice {
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .wheel-slice:hover {
+    opacity: 0.88;
+  }
+
+  .selected-pair-detail {
+    margin-top: 1rem;
+    background: var(--bg-subtle);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 1rem;
+  }
+
+  .filter-bar {
+    display: flex;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .filter-btn {
+    background: #fff;
+    border: 1px solid var(--border);
+    color: var(--navy);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.38rem 0.75rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .filter-btn.active,
+  .filter-btn:hover {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+  }
+
+  .pair-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 0.85rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .pair-card.highlighted {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(184, 125, 59, 0.22);
+  }
+
+  .pair-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.45rem;
+  }
+
+  .pair-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.28rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .pair-cat {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: var(--olive-light);
+    color: var(--olive);
+  }
+
+  .pair-meta {
+    font-size: 0.88rem;
+    margin-top: 0.45rem;
+    padding-top: 0.45rem;
+    border-top: 1px dashed var(--border);
+  }
+
+  /* Illustration Figure */
+  .illu-box {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    margin: 1.35rem 0;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .illu-box svg {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: var(--radius-sm);
+  }
+
+  .illu-caption {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 0.55rem;
+    font-style: italic;
+  }
+
+  /* Seasons Grid */
+  .seasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1.1rem;
+    margin: 1.25rem 0 1.75rem;
+  }
+
+  .season-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .season-card svg {
+    width: 100%;
+    height: 112px;
+    display: block;
+  }
+
+  /* Checklist & Interactive Notebook */
+  .exam-list {
+    list-style: none;
+    margin: 1rem 0 1.5rem 0;
+    padding: 0;
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  .exam-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .exam-item input[type="checkbox"] {
+    margin-top: 0.25rem;
+    accent-color: var(--navy);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  .notebook-card {
+    background: linear-gradient(180deg, #FFFDF9 0%, #FAF5EC 100%);
+    border: 1.5px solid var(--gold);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    margin: 1.5rem 0 2rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .field-group {
+    margin-bottom: 1.1rem;
+  }
+
+  .field-group label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--navy);
+    margin-bottom: 0.35rem;
+  }
+
+  .field-group textarea {
+    width: 100%;
+    min-height: 76px;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.92rem;
+    color: var(--ink);
+    background: #fff;
+    resize: vertical;
+  }
+
+  .field-group textarea:focus {
+    outline: 2px solid rgba(184, 125, 59, 0.35);
+    border-color: var(--gold);
+  }
+
+  .notebook-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .status-msg {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--olive);
+  }
+
+  /* Prayer & Key Phrase */
+  .prayer-box {
+    background: #fff;
+    border: 1px solid var(--gold-light);
+    border-left: 5px solid var(--navy);
+    border-radius: var(--radius-md);
+    padding: 1.75rem;
+    margin: 1.5rem 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.22rem;
+    line-height: 1.65;
+    color: var(--navy-dark);
+  }
+
+  .key-phrase-box {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+    color: #fff;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+    border: 2px solid var(--gold);
+  }
+
+  .key-phrase-box blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+    font-style: italic;
+    color: var(--gold-light);
+    max-width: 44ch;
+    margin: 0 auto 0.75rem;
+    line-height: 1.35;
+  }
+
+  footer {
+    background: var(--navy-dark);
+    color: rgba(255, 255, 255, 0.78);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+
+  /* Model Pattern Blocks & Classical Art Figures */
+  .art-figure {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 0.9rem;
+    margin: 1.4rem 0;
+    box-shadow: var(--shadow-sm);
+  }
+  .art-figure img {
+    width: 100%;
+    max-height: 460px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    display: block;
+    background: var(--bg-subtle);
+  }
+  .art-figure figcaption {
+    margin-top: 0.7rem;
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .art-figure figcaption strong {
+    display: block;
+    color: var(--navy);
+    font-size: 0.92rem;
+    margin-bottom: 0.15rem;
+  }
+  .art-figure figcaption a {
+    color: var(--gold);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .art-figure figcaption a:hover {
+    text-decoration: underline;
+  }
+  .diptych-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.4rem 0;
+  }
+  .diptych-grid .art-figure {
+    margin: 0;
+  }
+  .diptych-grid .art-figure img {
+    height: 290px;
+  }
+  .prep-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.95rem;
+    margin: 1.15rem 0;
+  }
+  .prep-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+  }
+  .prep-card h4 {
+    margin: 0 0 0.35rem 0;
+    color: var(--navy);
+    font-size: 0.98rem;
+  }
+  .prep-card p {
+    font-size: 0.87rem;
+    margin-bottom: 0;
+  }
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+  .toc-grid a {
+    display: block;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.6rem 0.85rem;
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .toc-grid a:hover {
+    border-color: var(--gold);
+    background: var(--bg-subtle);
+  }
+  .callout-app {
+    background: var(--olive-light);
+    border-left: 4px solid var(--olive);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 0.95rem 1.2rem;
+    margin: 1.15rem 0;
+    font-size: 0.93rem;
+  }
+  .callout-dist {
+    background: #FDF6F3;
+    border-left: 4px solid var(--terracotta);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 0.95rem 1.2rem;
+    margin: 1.15rem 0;
+    font-size: 0.93rem;
+  }
+  @media (max-width: 720px) {
+    .diptych-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 920px) {
+    .hero-grid,
+    .polarities-workbench,
+    .info-3col {
+      grid-template-columns: 1fr;
+    }
+    .wheel-panel {
+      position: static;
+    }
+  }
+
+  @media print {
+    .progress-wrap,
+    .topbar,
+    .controls,
+    .hero-cta-row,
+    .notebook-actions,
+    .filter-bar {
+      display: none !important;
+    }
+    body {
+      background: #fff;
+      font-size: 11pt;
+    }
+    .card,
+    .deliverable-banner,
+    .pair-card,
+    .illu-box {
+      box-shadow: none;
+      break-inside: avoid;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-wrap" aria-hidden="true">
+  <div class="progress-bar" id="readingProgress"></div>
+</div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#topo" class="brand">
+      <span class="brand-badge">Ec</span>
+      <span>
+        <span class="brand-title">Eclesiastes 3</span>
+        <span class="brand-sub">Estudo Bíblico &amp; Infográfico</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Navegação do estudo">
+      <a href="#infografico-sintese">Infográfico</a>
+      <a href="#parte-1">Parte I (vv. 1–22)</a>
+      <a href="#polaridades">14 Pares</a>
+      <a href="#parte-2">Parte II (Teologia)</a>
+      <a href="#parte-3">Parte III (Prática)</a>
+      <a href="#parte-4">Parte IV (Conclusão)</a>
+    </nav>
+
+    <div class="controls">
+      <button type="button" class="btn-tool" id="fontDec" title="Diminuir fonte">A-</button>
+      <button type="button" class="btn-tool" id="fontReset" title="Tamanho padrão">A</button>
+      <button type="button" class="btn-tool" id="fontInc" title="Aumentar fonte">A+</button>
+      <button type="button" class="btn-tool btn-primary" onclick="window.print()">Imprimir / PDF</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="topo">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">Padrão Master Bíblico • Eclesiastes 3:1–22</span>
+      <h1>Tudo Tem o Seu Tempo — <em>Eclesiastes 3</em></h1>
+      <p class="hero-lead">
+        Um estudo bíblico completo sobre o tempo, a soberania de Deus, os ciclos da vida e o propósito da existência — reunindo o <strong>Infográfico Bíblico de Síntese</strong> e o <strong>Estudo Bíblico Completo em HTML Ilustrado</strong> em 4 partes e 24 seções.
+      </p>
+      <div class="thesis-box">
+        <strong>Tema Central &amp; Verdade Fundamental</strong>
+        Aprender a compreender o tempo da vida sem perder de vista a eternidade de Deus. O ser humano vive dentro do tempo, mas Deus governa a história para além do tempo.
+      </div>
+      <div class="hero-cta-row">
+        <a href="#infografico-sintese" class="btn-hero btn-hero-gold">Ver Infográfico de Síntese</a>
+        <a href="#caderno-reflexao" class="btn-hero btn-hero-outline">Ir ao Caderno de Reflexão</a>
+      </div>
+    </div>
+
+    <div class="hero-art-card">
+      <svg viewBox="0 0 360 280" width="100%" height="auto" role="img" aria-label="Ilustração editorial do astrolábio do tempo e da eternidade em Eclesiastes 3">
+        <defs>
+          <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1B2A4A" />
+            <stop offset="100%" stop-color="#324B7A" />
+          </linearGradient>
+          <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#E8D5B7" />
+            <stop offset="100%" stop-color="#B87D3B" />
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="360" height="280" rx="14" fill="url(#skyGrad)" />
+        <circle cx="180" cy="142" r="102" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="4 4" />
+        <circle cx="180" cy="142" r="82" fill="none" stroke="#E8D5B7" stroke-width="2" />
+        <!-- 12 ticks around dial -->
+        <g stroke="#E8D5B7" stroke-width="2">
+          <line x1="180" y1="52" x2="180" y2="64" />
+          <line x1="180" y1="220" x2="180" y2="232" />
+          <line x1="90" y1="142" x2="102" y2="142" />
+          <line x1="258" y1="142" x2="270" y2="142" />
+          <line x1="116" y1="78" x2="125" y2="87" />
+          <line x1="235" y1="197" x2="244" y2="206" />
+          <line x1="244" y1="78" x2="235" y2="87" />
+          <line x1="125" y1="197" x2="116" y2="206" />
+        </g>
+        <!-- Central hourglass motif -->
+        <polygon points="154,104 206,104 180,142" fill="rgba(232,213,183,0.22)" stroke="#E8D5B7" stroke-width="1.8" />
+        <polygon points="154,180 206,180 180,142" fill="rgba(184,125,59,0.35)" stroke="#E8D5B7" stroke-width="1.8" />
+        <line x1="148" y1="104" x2="212" y2="104" stroke="#E8D5B7" stroke-width="3" stroke-linecap="round" />
+        <line x1="148" y1="180" x2="212" y2="180" stroke="#E8D5B7" stroke-width="3" stroke-linecap="round" />
+        <!-- Falling sand -->
+        <line x1="180" y1="142" x2="180" y2="174" stroke="#E8D5B7" stroke-width="1.5" stroke-dasharray="2 2" />
+        <polygon points="163,178 197,178 180,160" fill="#E8D5B7" opacity="0.85" />
+        <text x="180" y="32" text-anchor="middle" fill="#E8D5B7" font-family="Cormorant Garamond, serif" font-size="18" font-weight="700">TEMPO E ETERNIDADE</text>
+        <text x="180" y="260" text-anchor="middle" fill="#FFFFFF" font-family="Plus Jakarta Sans, sans-serif" font-size="11" letter-spacing="0.06em">ECLESIASTES 3:1–22</text>
+      </svg>
+      <p class="hero-art-caption">Astrolábio e Ampulheta: a tensão fértil entre o tempo cronológico e a eternidade soberana de Deus.</p>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <!-- BLOCO PADRÃO DO MODELO: ANTES DE COMEÇAR & ÍNDICE -->
+  <section class="deliverable-banner" aria-label="Como ler Eclesiastes 3 com profundidade">
+    <span class="deliverable-tag">Antes de começar</span>
+    <h2>Como ler Eclesiastes 3 com profundidade</h2>
+    <p>
+      Eclesiastes 3 convida a enxergar os ciclos da existência sob a soberania de Deus: cada estação tem seu propósito, os limites humanos nos conduzem à humildade e a eternidade no coração nos orienta a viver o presente com gratidão.
+    </p>
+    <div class="prep-grid">
+      <div class="prep-card">
+        <h4>📖 Compreender</h4>
+        <p>Observe a estrutura do capítulo: o poema dos 14 pares (vv. 1–8), a reflexão sobre a eternidade e os dons de Deus (vv. 9–15) e o olhar sobre a justiça e a mortalidade (vv. 16–22).</p>
+      </div>
+      <div class="prep-card">
+        <h4>💛 Acolher</h4>
+        <p>Permita que o texto examine sua relação com o tempo, alivie a ansiedade de querer controlar o futuro e renove sua confiança no governo de Deus.</p>
+      </div>
+      <div class="prep-card">
+        <h4>👣 Praticar</h4>
+        <p>Discirna a estação que você vive hoje, aja com sabedoria no tempo oportuno, faça o bem e desfrute com gratidão das dádivas diárias.</p>
+      </div>
+      <div class="prep-card">
+        <h4>🔎 Nota de leitura</h4>
+        <p>Este estudo reúne síntese visual, explicação versículo a versículo e aplicações práticas. Acompanhe a leitura com Eclesiastes 3 aberto em sua Bíblia.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:1.5rem;">Roteiro de leitura • Índice do estudo</h3>
+    <div class="toc-grid">
+      <a href="#infografico-sintese">1. Infográfico bíblico de síntese</a>
+      <a href="#sec-1">2. Introdução e contexto do livro</a>
+      <a href="#sec-3">3. Ec 3:1–8 — Os 14 pares de tempos</a>
+      <a href="#sec-4">4. Ec 3:9–11 — Trabalho e eternidade</a>
+      <a href="#sec-5">5. Ec 3:12–15 — Alegria e obra eterna</a>
+      <a href="#sec-7">6. Ec 3:16–22 — Justiça, morte e porção</a>
+      <a href="#parte-2">7. Fundamentos doutrinários e Cristo</a>
+      <a href="#parte-3">8. Discernimento das estações e prática</a>
+      <a href="#caderno-reflexao">9. Exame pessoal e caderno de reflexão</a>
+      <a href="#parte-4">10. Oração final e referências</a>
+    </div>
+  </section>
+
+  <!-- PRODUTO 1: INFOGRÁFICO BÍBLICO DE SÍNTESE -->
+  <section id="infografico-sintese" class="deliverable-banner" aria-label="Infográfico Bíblico de Síntese">
+    <span class="deliverable-tag">Produto 1 • Infográfico Bíblico de Síntese</span>
+    <h2>Arquitetura Teológica de Eclesiastes 3 em Um Relance</h2>
+    <p>
+      Síntese visual estruturada para estudo rápido, pregação, ensino ou impressão em PDF. Reúne os três movimentos do capítulo, o vocabulário hebraico essencial, o contraste entre tempo humano e eternidade divina e as sete verdades espirituais.
+    </p>
+
+    <div class="info-3col">
+      <div class="mov-card">
+        <span class="mov-verse">Movimento I • Versículos 1–8</span>
+        <h4>Os 14 Pares de Tempos (28 Realidades)</h4>
+        <p style="font-size:0.9rem; margin-bottom:0;">
+          A amplitude das estações da existência humana — de nascer e morrer até guerra e paz — revelando que cada circunstância pede discernimento e resposta adequada.
+        </p>
+      </div>
+      <div class="mov-card m2">
+        <span class="mov-verse">Movimento II • Versículos 9–15</span>
+        <h4>Limites Humanos, Dons &amp; Eternidade</h4>
+        <p style="font-size:0.9rem; margin-bottom:0;">
+          Deus pôs a eternidade no coração humano, mas ocultou a obra completa do princípio ao fim. Alegrar-se e fazer o bem é dom de Deus; o que Ele faz dura para sempre.
+        </p>
+      </div>
+      <div class="mov-card m3">
+        <span class="mov-verse">Movimento III • Versículos 16–22</span>
+        <h4>Injustiça, Mortalidade &amp; Porção Presente</h4>
+        <p style="font-size:0.9rem; margin-bottom:0;">
+          Diante da corrupção nos tribunais e da mortalidade partilhada com os animais, Deus julgará o justo e o ímpio, e a porção do homem é viver e alegrar-se hoje em suas obras.
+        </p>
+      </div>
+    </div>
+
+    <h3>Conceitos-Chave do Texto Bíblico</h3>
+    <div class="lexicon-grid">
+      <div class="lex-item">
+        <div class="lex-top">
+          <span class="lex-translit">O Pregador (Mestre)</span>
+        </div>
+        <p style="font-size:0.86rem; margin-bottom:0;">Aquele que reúne e instrui a assembleia, conduzindo uma investigação sábia sobre a condição humana sob o sol.</p>
+      </div>
+      <div class="lex-item">
+        <div class="lex-top">
+          <span class="lex-translit">Tempo Marcado e Estação</span>
+        </div>
+        <p style="font-size:0.86rem; margin-bottom:0;">O momento determinado e a ocasião oportuna estabelecidos por Deus para cada propósito sob o céu (v. 1).</p>
+      </div>
+      <div class="lex-item">
+        <div class="lex-top">
+          <span class="lex-translit">Vapor e Transitoriedade</span>
+        </div>
+        <p style="font-size:0.86rem; margin-bottom:0;">A brevidade da vida como sopro ou neblina passageira: aquilo que não conseguimos reter nem controlar plenamente.</p>
+      </div>
+      <div class="lex-item">
+        <div class="lex-top">
+          <span class="lex-translit">Eternidade</span>
+        </div>
+        <p style="font-size:0.86rem; margin-bottom:0;">O horizonte duradouro que Deus colocou no coração humano (v. 11) e a marca permanente de tudo o que Ele faz (v. 14).</p>
+      </div>
+      <div class="lex-item">
+        <div class="lex-top">
+          <span class="lex-translit">Porção Presente</span>
+        </div>
+        <p style="font-size:0.86rem; margin-bottom:0;">O quinhão concedido por Deus ao ser humano para viver, trabalhar e alegrar-se com gratidão no presente (v. 22).</p>
+      </div>
+    </div>
+
+    <h3>Quadro Infográfico: Perspectiva Humana vs. Perspectiva Divina</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Dimensão</th>
+            <th>O Ser Humano (Sob o Sol)</th>
+            <th>Deus (Acima do Tempo)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Visão e Horizonte</strong></td>
+            <td>Enxerga parcialmente; não descobre a obra de Deus do princípio ao fim (v. 11).</td>
+            <td>Conhece a totalidade, o princípio e o fim; governa a história com sabedoria perfeita.</td>
+          </tr>
+          <tr>
+            <td><strong>Relação com o Tempo</strong></td>
+            <td>Vive um dia de cada vez; não escolhe quando nasce nem quando morre (v. 2).</td>
+            <td>Não está limitado ao tempo; faz tudo formoso no seu tempo (v. 11).</td>
+          </tr>
+          <tr>
+            <td><strong>Permanência da Obra</strong></td>
+            <td>Sujeito a perdas, mudanças, envelhecimento e retorno ao pó (vv. 19–20).</td>
+            <td>Tudo o que faz dura eternamente; nada se lhe acrescenta nem se lhe tira (v. 14).</td>
+          </tr>
+          <tr>
+            <td><strong>Justiça e Prestação de Contas</strong></td>
+            <td>Pode sofrer ou presenciar perversidade no lugar do juízo (v. 16).</td>
+            <td>Pede conta do que passou e julgará o justo e o ímpio no tempo certo (vv. 15, 17).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- PRODUTO 2: ESTUDO BÍBLICO COMPLETO EM HTML ILUSTRADO -->
+  <div id="parte-1" class="part-header">
+    <div>
+      <span class="part-kicker">Produto 2 • Estudo Bíblico Completo em HTML Ilustrado</span>
+      <h2>Parte I — Desenvolvimento Completo do Estudo Bíblico (Ec 3:1–22)</h2>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 1 -->
+  <article class="card" id="sec-1">
+    <h3>1. Introdução: por que Eclesiastes 3 é tão importante?</h3>
+    <p>Existem capítulos da Bíblia que nos ensinam a agir. Outros nos ensinam a esperar, perseverar, corrigir nossos caminhos e confiar em Deus.</p>
+    <p>Eclesiastes 3 nos ensina algo particularmente profundo: a viver com discernimento dentro das diferentes estações da existência humana.</p>
+    <p>O capítulo começa com uma das declarações mais conhecidas das Escrituras:</p>
+    <div class="scripture-quote">
+      “Tudo tem o seu tempo determinado, e há tempo para todo propósito debaixo do céu.”
+      <cite>Eclesiastes 3:1</cite>
+    </div>
+    <p>Essa afirmação não é simplesmente uma reflexão poética sobre as mudanças da vida. É uma declaração sobre a condição humana diante da soberania divina.</p>
+    <p>Vivemos em um mundo de acontecimentos que não controlamos inteiramente:</p>
+    <ul>
+      <li>Nascemos, crescemos e envelhecemos.</li>
+      <li>Construímos relacionamentos e enfrentamos despedidas.</li>
+      <li>Experimentamos alegrias e atravessamos tristezas.</li>
+      <li>Iniciamos projetos e precisamos encerrá-los.</li>
+      <li>Plantamos, esperamos e colhemos.</li>
+      <li>Ganhamos algumas coisas e perdemos outras.</li>
+      <li>Fazemos planos, mas nem sempre os acontecimentos seguem nossas expectativas.</li>
+    </ul>
+    <p>O problema não está apenas na existência dessas mudanças. Está também na nossa dificuldade de compreender o significado delas.</p>
+    <p>Queremos que os momentos bons permaneçam. Desejamos antecipar os acontecimentos desagradáveis. Tentamos acelerar aquilo que ainda precisa amadurecer e, muitas vezes, insistimos em conservar aquilo cujo ciclo já terminou.</p>
+    <p>Eclesiastes 3 confronta essa necessidade humana de controlar o tempo.</p>
+    <p>O texto não ensina passividade, fatalismo ou acomodação. Ensina discernimento, humildade, responsabilidade e confiança em Deus.</p>
+    <p>Uma das grandes lições do capítulo é que sabedoria não significa controlar todas as estações da vida, mas aprender a viver corretamente em cada uma delas.</p>
+  </article>
+
+  <!-- SEÇÃO 2 -->
+  <article class="card" id="sec-2">
+    <h3>2. Contexto histórico, literário e espiritual</h3>
+    <figure class="art-figure">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/087.King_Solomon_in_Old_Age.jpg/960px-087.King_Solomon_in_Old_Age.jpg" alt="O Rei Salomão na Velhice, gravura de Gustave Doré" loading="lazy" />
+      <figcaption>
+        <strong>O Mestre da Sabedoria e a Reflexão sobre a Vida</strong>
+        Gravura clássica de Gustave Doré (<em>O Rei Salomão na Velhice</em>, 1866), usada como imagem de apoio à tradição sapiencial associada ao livro de Eclesiastes. · <a href="https://commons.wikimedia.org/wiki/File:087.King_Solomon_in_Old_Age.jpg" target="_blank" rel="noopener noreferrer">Ver fonte e licença da imagem</a>
+      </figcaption>
+    </figure>
+
+    <h4>2.1. O livro de Eclesiastes</h4>
+    <p>Eclesiastes integra os livros de sabedoria do Antigo Testamento, ao lado de Jó, Salmos, Provérbios e Cântico dos Cânticos.</p>
+    <p>O título do livro remete à figura daquele que reúne e instrui uma assembleia, sendo tradicionalmente traduzido como Pregador ou Mestre.</p>
+    <p>O livro apresenta uma investigação profunda sobre a existência humana. Seu autor examina questões fundamentais:</p>
+    <ul>
+      <li>Qual é o sentido da vida?</li>
+      <li>O que realmente permanece depois de nossos esforços?</li>
+      <li>A riqueza consegue produzir satisfação permanente?</li>
+      <li>O conhecimento resolve todos os problemas?</li>
+      <li>O trabalho garante felicidade?</li>
+      <li>Por que pessoas justas também enfrentam sofrimentos?</li>
+      <li>Como viver quando não compreendemos o que acontece ao nosso redor?</li>
+    </ul>
+    <p>A tradição judaico-cristã associa Eclesiastes a Salomão. O livro, entretanto, não apresenta uma identificação nominal inequívoca do autor. Sua voz literária está associada à figura do Pregador, filho de Davi e rei em Jerusalém.</p>
+    <p>O importante para a interpretação de Eclesiastes 3 é compreender que o capítulo faz parte de uma reflexão maior sobre os limites das realizações humanas.</p>
+
+    <h4>2.2. O significado de vaidade</h4>
+    <p>Uma expressão recorrente no livro é: <em>“Vaidade de vaidades, tudo é vaidade.”</em></p>
+    <p>A expressão original utilizada pelo texto transmite a ideia de vapor, sopro, neblina ou algo passageiro.</p>
+    <p>Não significa necessariamente que tudo seja inútil ou que a vida não tenha valor. A imagem é a de algo que não conseguimos segurar. O vapor aparece, mas desaparece. A vida humana também é transitória.</p>
+    <p>Eclesiastes mostra que, quando tentamos encontrar significado definitivo somente nas conquistas, riquezas, prazeres e realizações humanas, descobrimos que essas coisas não conseguem sustentar o peso de nossas expectativas.</p>
+    <p>O problema não é desfrutar os bens da vida. O problema é transformá-los na fonte definitiva de nossa segurança e felicidade.</p>
+
+    <h4>2.3. O lugar de Eclesiastes 3 na estrutura do livro</h4>
+    <p>Nos capítulos anteriores, o Pregador investiga o trabalho, a sabedoria, o prazer, as riquezas e as realizações.</p>
+    <p>Em Eclesiastes 1, observa a repetição dos ciclos naturais e a aparente impossibilidade de encontrar algo verdadeiramente permanente nas atividades humanas.</p>
+    <p>Em Eclesiastes 2, examina os prazeres, os empreendimentos, as riquezas e as realizações pessoais.</p>
+    <p>No capítulo 3, aprofunda a reflexão sobre o tempo e os acontecimentos da existência. O capítulo apresenta três grandes movimentos:</p>
+    <ol>
+      <li><strong>Versículos 1–8:</strong> os tempos e as estações da vida.</li>
+      <li><strong>Versículos 9–15:</strong> os limites humanos diante da obra de Deus e o valor de desfrutar os seus dons.</li>
+      <li><strong>Versículos 16–22:</strong> a injustiça, a mortalidade humana e a necessidade de reconhecer os limites da compreensão humana.</li>
+    </ol>
+    <p>Essa estrutura é fundamental: o capítulo não termina no conhecido poema dos tempos. Ele continua e apresenta questões difíceis sobre a justiça, a morte e o destino humano. Não devemos interpretar os primeiros oito versículos isoladamente do restante do capítulo.</p>
+  </article>
+
+  <!-- SEÇÃO 3 -->
+  <article class="card" id="sec-3">
+    <h3 id="sec-3">3. Eclesiastes 3:1–8 — Há um tempo determinado para cada propósito</h3>
+    <div class="diptych-grid">
+      <figure class="art-figure">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Sower_(after_Millet,_1889)_-_My_Dream.jpg/960px-Sower_(after_Millet,_1889)_-_My_Dream.jpg" alt="O Semeador, pintura de Vincent van Gogh segundo Millet" loading="lazy" />
+        <figcaption>
+          <strong>Tempo de plantar (Eclesiastes 3:2)</strong>
+          <em>O Semeador</em> (Vincent van Gogh, 1889, segundo Jean-François Millet): imagem ilustrativa do gesto de lançar a semente no tempo oportuno. · <a href="https://commons.wikimedia.org/wiki/File:Sower_(after_Millet,_1889)_-_My_Dream.jpg" target="_blank" rel="noopener noreferrer">Ver fonte e licença da imagem</a>
+        </figcaption>
+      </figure>
+      <figure class="art-figure">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg/960px-Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg" alt="Os Ceifadores, pintura de Pieter Bruegel, o Velho" loading="lazy" />
+        <figcaption>
+          <strong>Tempo de colher o que se plantou (Eclesiastes 3:2)</strong>
+          <em>Os Ceifadores</em> (Pieter Bruegel, o Velho, 1565): cena clássica da colheita e do ritmo das estações humanas sob o sol. · <a href="https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg" target="_blank" rel="noopener noreferrer">Ver fonte e licença da imagem</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <h4>3.1. Versículo 1 — O princípio que organiza o capítulo</h4>
+    <div class="scripture-quote">
+      “Tudo tem o seu tempo determinado, e há tempo para todo propósito debaixo do céu.”
+      <cite>Eclesiastes 3:1</cite>
+    </div>
+    <p>Esse versículo estabelece a ideia central de todo o capítulo. A expressão tempo determinado aponta para a existência de ocasiões, períodos e momentos próprios para diferentes acontecimentos.</p>
+    <p>A vida não é uma sequência de acontecimentos isolados. Ela possui ciclos, mudanças e circunstâncias que exigem respostas diferentes. O texto apresenta duas ideias complementares:</p>
+    <ul>
+      <li><strong>Primeira:</strong> existe um tempo para cada acontecimento. A vida não acontece toda de uma vez. Existem processos que exigem espera, amadurecimento e preparação.</li>
+      <li><strong>Segunda:</strong> existe um propósito debaixo do céu. A expressão não significa que cada decisão humana, inclusive as decisões pecaminosas, seja moralmente aprovada por Deus. O Pregador está observando os acontecimentos da existência humana e as diferentes condições que compõem a experiência de viver.</li>
+    </ul>
+    <p>Precisamos fazer uma distinção importante:</p>
+    <ul>
+      <li>Deus é soberano sobre a história.</li>
+      <li>O ser humano continua responsável por suas decisões.</li>
+      <li>Nem tudo o que acontece é moralmente correto.</li>
+      <li>Nem toda circunstância dolorosa representa aprovação divina.</li>
+      <li>Nem sempre compreendemos a razão de determinado acontecimento.</li>
+    </ul>
+    <p>O versículo nos convida a abandonar a ilusão de que podemos controlar completamente a existência.</p>
+    <p><strong>Aplicação espiritual:</strong> não transforme a ansiedade pelo futuro em incapacidade de viver o presente. Existem coisas que precisam ser construídas. Outras precisam ser aguardadas. Algumas precisam ser encerradas. A sabedoria está em reconhecer a diferença.</p>
+
+    <div class="illu-box" id="polaridades">
+      <svg viewBox="0 0 680 210" role="img" aria-label="Ilustração do quadrante das estações e polaridades de Eclesiastes 3:1–8">
+        <rect x="0" y="0" width="680" height="210" rx="12" fill="#FAF7F2" stroke="#E2D9C8" />
+        <circle cx="115" cy="105" r="76" fill="#1B2A4A" stroke="#B87D3B" stroke-width="3" />
+        <line x1="39" y1="105" x2="191" y2="105" stroke="#E8D5B7" stroke-width="1.5" />
+        <line x1="115" y1="29" x2="115" y2="181" stroke="#E8D5B7" stroke-width="1.5" />
+        <circle cx="115" cy="105" r="14" fill="#B87D3B" />
+        <text x="115" y="54" text-anchor="middle" fill="#E8D5B7" font-size="11" font-weight="700">SEMEAR</text>
+        <text x="115" y="164" text-anchor="middle" fill="#E8D5B7" font-size="11" font-weight="700">COLHER</text>
+        <text x="68" y="101" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="600">CHORAR</text>
+        <text x="162" y="101" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="600">RIR</text>
+
+        <text x="225" y="52" fill="#1B2A4A" font-family="Cormorant Garamond, serif" font-size="25" font-weight="700">Os 14 Pares de Tempos (Ec 3:2–8)</text>
+        <text x="225" y="80" fill="#5A6370" font-size="13">Um merismo poético hebraico que abrange a totalidade das experiências humanas sob o céu.</text>
+        <rect x="225" y="98" width="420" height="82" rx="8" fill="#F2ECE1" stroke="#E2D9C8" />
+        <text x="242" y="122" fill="#1B2A4A" font-size="12" font-weight="700">Como interagir abaixo:</text>
+        <text x="242" y="143" fill="#1E242B" font-size="12">• Clique em qualquer fatia da Roda Interativa para inspecionar o par em destaque.</text>
+        <text x="242" y="164" fill="#1E242B" font-size="12">• Filtre por categoria e leia os 14 pares completos com lição e aplicação prática.</text>
+      </svg>
+      <p class="illu-caption">Ilustração editorial — As 14 polaridades (28 expressões) expressam a abrangência da vida humana em contraste com a permanência de Deus.</p>
+    </div>
+
+    <h4>3.2. Versículos 2–8 — Os 14 pares de tempos da existência</h4>
+    <p>O Pregador apresenta 14 pares de acontecimentos opostos, totalizando 28 expressões relacionadas às experiências humanas. Esses pares representam a amplitude da vida: nascimento e morte, construção e destruição, relacionamentos, emoções, conflitos, silêncio e convivência.</p>
+    <p>Não são instruções para praticarmos indiscriminadamente tudo o que aparece na lista. São observações sobre as diferentes circunstâncias que compõem a experiência humana.</p>
+
+    <div class="polarities-workbench">
+      <div class="wheel-panel">
+        <h4 style="margin-top:0; text-align:center;">Roda Interativa das 14 Polaridades</h4>
+        <svg id="polaritiesWheel" class="wheel-svg" viewBox="0 0 420 420" role="img" aria-label="Roda interativa com os 14 pares de tempos de Eclesiastes 3:2–8"></svg>
+        <div class="selected-pair-detail" id="wheelDetailBox"></div>
+      </div>
+
+      <div>
+        <div class="filter-bar" role="group" aria-label="Filtrar pares por categoria">
+          <button type="button" class="filter-btn active" data-cat="all">Todos os 14 Pares</button>
+          <button type="button" class="filter-btn" data-cat="vida">Ciclo da Vida &amp; Terra</button>
+          <button type="button" class="filter-btn" data-cat="emocoes">Emoções &amp; Relações</button>
+          <button type="button" class="filter-btn" data-cat="posse">Posse, Fala &amp; Conflito</button>
+        </div>
+        <div id="polaritiesList"></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- SEÇÃO 4 -->
+  <article class="card" id="sec-4">
+    <h3 id="sec-4">4. Eclesiastes 3:9–11 — O trabalho humano, a eternidade e os limites da compreensão</h3>
+    <figure class="art-figure">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Jan_Vermeulen_Vanitas_Still_Life.jpg/960px-Jan_Vermeulen_Vanitas_Still_Life.jpg" alt="Natureza-Morta Vanitas com ampulheta e livros, pintura de Jan Vermeulen" loading="lazy" />
+      <figcaption>
+        <strong>A Brevidade do Tempo e a Eternidade no Coração</strong>
+        <em>Natureza-Morta Vanitas</em> (Jan Vermeulen, 1654): pintura clássica com ampulheta, livros e a inscrição latina de Eclesiastes 1:2, ilustrando a fragilidade do tempo humano diante da eternidade de Deus. · <a href="https://commons.wikimedia.org/wiki/File:Jan_Vermeulen_Vanitas_Still_Life.jpg" target="_blank" rel="noopener noreferrer">Ver fonte e licença da imagem</a>
+      </figcaption>
+    </figure>
+    <p>Depois de apresentar os diferentes tempos da existência, o Pregador faz uma pergunta que muda a direção da reflexão.</p>
+
+    <div class="illu-box">
+      <svg viewBox="0 0 680 190" role="img" aria-label="Ilustração sobre o trabalho humano, a eternidade no coração e os limites da compreensão">
+        <rect x="0" y="0" width="680" height="190" rx="12" fill="#1B2A4A" />
+        <circle cx="140" cy="95" r="56" fill="none" stroke="#E8D5B7" stroke-width="2" />
+        <path d="M140 39 A56 56 0 1 1 84 95" fill="none" stroke="#B87D3B" stroke-width="5" stroke-linecap="round" />
+        <text x="140" y="98" text-anchor="middle" fill="#E8D5B7" font-family="Cormorant Garamond, serif" font-size="16" font-weight="700" letter-spacing="0.06em">ETERNIDADE</text>
+        <text x="235" y="66" fill="#E8D5B7" font-family="Cormorant Garamond, serif" font-size="24" font-weight="700">“Tudo fez formoso em seu tempo”</text>
+        <text x="235" y="96" fill="#FFFFFF" font-size="13">Deus pôs a eternidade no coração humano, mas ocultou</text>
+        <text x="235" y="116" fill="#FFFFFF" font-size="13">o desígnio completo desde o princípio até o fim (Ec 3:11).</text>
+        <text x="235" y="148" fill="#E8D5B7" font-size="12" font-style="italic">Diálogo bíblico: Salmos 90:2 • Isaías 46:9–10</text>
+      </svg>
+      <p class="illu-caption">Ilustração editorial — A inquietação pela eternidade habita o coração humano, enquanto o governo integral pertence a Deus.</p>
+    </div>
+
+    <h4>4.1. Versículo 9 — Qual é o proveito de tanto trabalho?</h4>
+    <div class="scripture-quote">
+      “Que proveito tem o trabalhador naquilo em que trabalha?”
+      <cite>Eclesiastes 3:9</cite>
+    </div>
+    <p>A pergunta retoma um dos grandes temas do livro. O ser humano trabalha, constrói, planeja, acumula, conquista e se esforça. Entretanto, diante da passagem do tempo, descobre que não consegue garantir a permanência de suas realizações.</p>
+    <p>O problema não é o trabalho em si. A Bíblia valoriza o trabalho como expressão de responsabilidade e serviço. Provérbios 14:23 ensina que em todo trabalho há proveito. Colossenses 3:23 orienta que tudo seja feito de coração, como para o Senhor.</p>
+    <p>A questão de Eclesiastes é mais profunda: qual é o ganho definitivo que o ser humano consegue extrair de seu esforço, se não controla o tempo, os resultados e nem mesmo a duração de sua própria existência?</p>
+    <p>Uma pessoa pode trabalhar durante décadas e perder aquilo que construiu. Pode alcançar uma posição importante e descobrir que ela não proporciona a satisfação esperada. Pode acumular riquezas e não conseguir comprar aquilo que realmente deseja: tempo, saúde, relacionamentos verdadeiros e vida eterna.</p>
+    <p><strong>Lição espiritual:</strong> trabalhe com dedicação, mas não transforme suas realizações na razão definitiva da sua existência.</p>
+
+    <h4>4.2. Versículo 10 — A atividade que Deus permite ao ser humano</h4>
+    <div class="scripture-quote">
+      “Tenho visto o trabalho que Deus deu aos filhos dos homens, para com ele os exercitar.”
+      <cite>Eclesiastes 3:10</cite>
+    </div>
+    <p>O Pregador reconhece que a atividade humana está inserida em uma realidade maior, governada por Deus. A existência envolve responsabilidades, tarefas, desafios e circunstâncias que exigem nosso envolvimento.</p>
+    <p>A vida não é apresentada como um caminho de ausência de esforço. O ser humano precisa trabalhar, decidir, construir, cuidar e enfrentar suas responsabilidades.</p>
+    <p>Entretanto, há uma diferença entre trabalhar com propósito e acreditar que podemos controlar todos os resultados. Deus não nos chamou para viver dominados pela ilusão de controle.</p>
+    <p><strong>Aplicação:</strong> faça bem aquilo que está sob sua responsabilidade, sem assumir o peso de controlar tudo aquilo que está além de sua capacidade.</p>
+
+    <h4>4.3. Versículo 11 — Deus fez tudo formoso em seu tempo</h4>
+    <div class="scripture-quote">
+      “Tudo fez formoso em seu tempo; também pôs o mundo no coração deles, sem que o homem possa descobrir a obra que Deus fez desde o princípio até ao fim.”
+      <cite>Eclesiastes 3:11</cite>
+    </div>
+    <p>Este é um dos versículos mais profundos do capítulo. Ele apresenta duas verdades que precisam ser compreendidas conjuntamente.</p>
+    <p><strong>Primeira verdade:</strong> Deus faz tudo formoso em seu tempo. A expressão traduzida como formoso também transmite a ideia de algo apropriado, adequado ou belo em sua ocasião.</p>
+    <p>Isso não significa que todo acontecimento seja agradável ou que toda tragédia seja boa em si mesma. O texto está afirmando que a obra de Deus possui uma dimensão e uma ordem que ultrapassam a percepção humana.</p>
+    <p>Muitas vezes julgamos um acontecimento apenas pelo momento em que ele ocorre. Uma semente enterrada pode parecer perdida. Entretanto, aquele processo faz parte de seu desenvolvimento. Uma construção pode parecer destruída durante a reforma. Porém, a retirada de estruturas antigas pode ser necessária para uma reconstrução. Uma espera pode parecer improdutiva. Entretanto, pode revelar aspectos que não perceberíamos se tudo acontecesse imediatamente.</p>
+    <p>Precisamos tomar cuidado para não transformar essas ilustrações em explicações automáticas para sofrimentos reais. Nem sempre saberemos por que algo aconteceu. A declaração do Pregador é sobre a perspectiva e a sabedoria de Deus, não sobre nossa capacidade de explicar todas as circunstâncias.</p>
+    <p><strong>Segunda verdade:</strong> Deus colocou a eternidade no coração humano. O termo original traduzido como mundo em algumas versões e como eternidade em outras aponta para aquilo que transcende o instante imediato. O sentido é objeto de discussão interpretativa, mas, neste contexto, a ideia de eternidade ou de uma percepção do horizonte que ultrapassa o presente é especialmente significativa.</p>
+    <p>O ser humano possui uma inquietação que vai além das necessidades imediatas. Não queremos apenas sobreviver. Queremos compreender:</p>
+    <ul>
+      <li>De onde viemos?</li>
+      <li>Por que estamos aqui?</li>
+      <li>O que significa nossa existência?</li>
+      <li>O que acontece depois da morte?</li>
+      <li>Existe justiça definitiva?</li>
+      <li>Existe algo que ultrapasse a vida terrena?</li>
+      <li>Qual é o propósito de tudo o que estamos vivendo?</li>
+    </ul>
+    <p>Essa inquietação aponta para a dimensão espiritual da experiência humana. Entretanto, o versículo estabelece um limite: apesar de desejar compreender a totalidade, o ser humano não consegue descobrir integralmente a obra de Deus, do princípio ao fim.</p>
+    <p>Aqui encontramos uma tensão extraordinária: temos uma percepção da eternidade, mas vivemos dentro de limitações temporais. Queremos enxergar o quadro inteiro, mas conhecemos apenas partes da história. Queremos compreender o futuro, mas não conseguimos antecipar todos os acontecimentos. Queremos respostas completas, mas precisamos aprender a confiar mesmo quando as respostas não chegam.</p>
+    <p><strong>Lição espiritual:</strong> não confunda sua necessidade de compreender tudo com a capacidade de compreender tudo. A fé não exige que deixemos de pensar. Exige que reconheçamos que nossa compreensão é limitada diante da sabedoria de Deus.</p>
+
+    <h4>4.4. A diferença entre o tempo humano e a perspectiva eterna de Deus</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>O Ser Humano</th>
+            <th>Deus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Enxerga parcialmente.</td>
+            <td>Conhece a totalidade.</td>
+          </tr>
+          <tr>
+            <td>Vive um dia de cada vez.</td>
+            <td>Não está limitado ao tempo.</td>
+          </tr>
+          <tr>
+            <td>Não conhece todo o futuro.</td>
+            <td>Conhece o princípio e o fim.</td>
+          </tr>
+          <tr>
+            <td>Não controla os acontecimentos.</td>
+            <td>Governa a história.</td>
+          </tr>
+          <tr>
+            <td>Precisa aprender a esperar.</td>
+            <td>Sua sabedoria não é limitada.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><em>Síntese teológica de Eclesiastes 3:10–11, em diálogo com Salmos 90:2 e Isaías 46:9–10.</em> Essa diferença deve produzir humildade, não desespero. Não precisamos conhecer todos os detalhes do amanhã para sermos fiéis hoje.</p>
+  </article>
+
+  <!-- SEÇÃO 5 -->
+  <article class="card" id="sec-5">
+    <h3 id="sec-5">5. Eclesiastes 3:12–13 — A alegria de viver também é um presente de Deus</h3>
+
+    <h4>5.1. Versículo 12 — Alegrar-se e fazer o bem</h4>
+    <div class="scripture-quote">
+      “Já tenho conhecido que não há coisa melhor para eles do que alegrar-se e fazer bem na sua vida.”
+      <cite>Eclesiastes 3:12</cite>
+    </div>
+    <p>Depois de refletir sobre o tempo, a eternidade e os limites humanos, o Pregador apresenta uma conclusão prática. A vida deve ser vivida com alegria e com a prática do bem.</p>
+    <p>Essa afirmação é muito importante porque impede que interpretemos Eclesiastes como um livro de pessimismo absoluto. O Pregador não está dizendo que nada vale a pena. Está ensinando que, dentro das limitações humanas, existem coisas verdadeiramente boas que devem ser reconhecidas e desfrutadas.</p>
+    <p>Observe que o texto une duas atitudes: <strong>alegrar-se</strong> (reconhecer e desfrutar os dons da vida) e <strong>fazer o bem</strong> (transformar a existência em uma oportunidade de praticar o que é correto).</p>
+    <p>Não se trata apenas de buscar prazer pessoal. A alegria bíblica não deve estar separada da responsabilidade moral. Uma pessoa que desfruta suas conquistas, mas prejudica os outros, não está vivendo plenamente o princípio apresentado pelo texto.</p>
+    <p><strong>Lição espiritual:</strong> uma vida significativa não é medida apenas pelo que acumulamos, mas também pelo bem que realizamos.</p>
+
+    <h4>5.2. Versículo 13 — Comer, beber e desfrutar do trabalho</h4>
+    <div class="scripture-quote">
+      “E também que todo homem coma e beba e goze do bem de todo o seu trabalho; isto é um dom de Deus.”
+      <cite>Eclesiastes 3:13</cite>
+    </div>
+    <p>Esse versículo apresenta uma das perspectivas mais equilibradas de Eclesiastes. Comer e beber representam necessidades básicas, mas também a possibilidade de desfrutar a vida. O trabalho também aparece como algo que pode produzir satisfação quando reconhecemos seus frutos como presentes de Deus.</p>
+    <p>A passagem não defende o materialismo, a busca desenfreada por prazeres ou o consumismo. Ela ensina gratidão.</p>
+    <p>O ser humano frequentemente está tão concentrado naquilo que ainda não conquistou que deixa de reconhecer o valor do que já recebeu. Há pessoas que trabalham tanto para conquistar uma vida melhor que acabam sem tempo para viver. Há pessoas que acumulam recursos, mas não conseguem desfrutar relacionamentos. Há pessoas que esperam uma condição perfeita para começar a agradecer.</p>
+    <p>Eclesiastes nos chama de volta à realidade: a vida presente, com suas possibilidades e responsabilidades, também é um presente de Deus.</p>
+    <p><strong>Aplicação prática:</strong></p>
+    <ul>
+      <li>Valorize o alimento que chega à sua mesa.</li>
+      <li>Reconheça o valor do trabalho honesto.</li>
+      <li>Cuide das pessoas que caminham ao seu lado.</li>
+      <li>Reserve espaço para descanso.</li>
+      <li>Agradeça pelas conquistas, mesmo que ainda existam objetivos a alcançar.</li>
+      <li>Faça o bem enquanto possui oportunidade.</li>
+    </ul>
+    <p>A gratidão não elimina os desafios. Ela impede que os desafios ocupem todo o espaço da nossa percepção.</p>
+  </article>
+
+  <!-- SEÇÃO 6 -->
+  <article class="card" id="sec-6">
+    <h3>6. Eclesiastes 3:14–15 — A permanência da obra de Deus</h3>
+
+    <div class="illu-box">
+      <svg viewBox="0 0 680 175" role="img" aria-label="Ilustração da coluna eterna da obra de Deus e do ciclo contínuo do tempo">
+        <rect x="0" y="0" width="680" height="175" rx="12" fill="#F2ECE1" stroke="#E2D9C8" />
+        <rect x="75" y="30" width="44" height="115" rx="4" fill="#1B2A4A" />
+        <rect x="65" y="24" width="64" height="10" rx="2" fill="#B87D3B" />
+        <rect x="65" y="141" width="64" height="10" rx="2" fill="#B87D3B" />
+        <text x="150" y="64" fill="#1B2A4A" font-family="Cormorant Garamond, serif" font-size="22" font-weight="700">O que Deus faz dura eternamente</text>
+        <text x="150" y="92" fill="#1E242B" font-size="13">Nada se lhe deve acrescentar e nada se lhe deve tirar — para que haja temor diante d’Ele (v. 14).</text>
+        <text x="150" y="122" fill="#4A5D4E" font-size="12.5" font-weight="600">O que é já foi; o que há de ser também já foi; e Deus pede conta do que passou (v. 15).</text>
+      </svg>
+      <p class="illu-caption">Ilustração editorial — Permanência soberana da obra divina e responsabilidade diante do tempo que passa.</p>
+    </div>
+
+    <h4>6.1. Versículo 14 — O que Deus faz permanece</h4>
+    <div class="scripture-quote">
+      “Eu sei que tudo quanto Deus faz durará eternamente; nada se lhe deve acrescentar e nada se lhe deve tirar; e isto faz Deus para que haja temor diante dele.”
+      <cite>Eclesiastes 3:14</cite>
+    </div>
+    <p>Aqui encontramos uma das afirmações mais fortes sobre a soberania divina. O que Deus faz não depende de aperfeiçoamento humano. A obra de Deus não precisa de correção por deficiência de sabedoria.</p>
+    <p>O texto contrasta a instabilidade humana com a permanência divina. Nós construímos e reconstruímos. Deus não está sujeito à mesma limitação. Nós precisamos revisar decisões. Deus não age por desconhecimento. Nós mudamos de perspectiva à medida que adquirimos conhecimento. Deus não precisa descobrir aquilo que desconhece.</p>
+    <p>O versículo também apresenta a finalidade espiritual dessa realidade: para que haja temor diante dele. O temor de Deus não é simplesmente medo de uma ameaça. É reconhecimento reverente de sua grandeza, autoridade, santidade e soberania. Quando compreendemos que não somos o centro do universo, aprendemos a viver com mais humildade.</p>
+    <p><strong>Lição espiritual:</strong> a soberania de Deus deve produzir reverência, confiança e obediência.</p>
+
+    <h4>6.2. Versículo 15 — O passado, o presente e o futuro diante de Deus</h4>
+    <div class="scripture-quote">
+      “O que é já foi; e o que há de ser também já foi; e Deus pede conta do que passou.”
+      <cite>Eclesiastes 3:15</cite>
+    </div>
+    <p>Esse versículo retoma a reflexão sobre os ciclos da existência. Muitas experiências humanas se repetem. Gerações diferentes enfrentam desafios semelhantes: conflitos, ambições, relacionamentos, trabalho, sofrimento, alegrias e morte. A história muda em seus detalhes, mas a condição humana continua apresentando padrões recorrentes.</p>
+    <p>A expressão final do versículo possui nuances de tradução. Ela pode ser entendida como a ação de Deus em relação ao que passou, incluindo a ideia de trazer de volta aquilo que passou ou requerer contas do passado. O contexto mais amplo do livro aponta para a responsabilidade diante de Deus e para a realidade de seu juízo.</p>
+    <p>Isso nos ensina que o passado não está fora da perspectiva divina. O que fazemos possui importância. As decisões humanas não desaparecem simplesmente porque o tempo passou.</p>
+    <p><strong>Aplicação:</strong> viva de maneira responsável, sabendo que suas escolhas possuem consequências e que a justiça de Deus não está limitada à percepção humana.</p>
+  </article>
+
+  <!-- SEÇÃO 7 -->
+  <article class="card" id="sec-7">
+    <h3 id="sec-7">7. Eclesiastes 3:16–17 — A injustiça humana e o juízo de Deus</h3>
+
+    <div class="illu-box">
+      <svg viewBox="0 0 680 165" role="img" aria-label="Ilustração da balança da justiça divina diante da injustiça humana em Eclesiastes 3:16–17">
+        <rect x="0" y="0" width="680" height="165" rx="12" fill="#FAF7F2" stroke="#E2D9C8" />
+        <line x1="120" y1="45" x2="120" y2="135" stroke="#1B2A4A" stroke-width="3" />
+        <line x1="75" y1="60" x2="165" y2="60" stroke="#B87D3B" stroke-width="3" />
+        <line x1="85" y1="60" x2="75" y2="95" stroke="#5A6370" stroke-width="1.5" />
+        <line x1="105" y1="60" x2="115" y2="95" stroke="#5A6370" stroke-width="1.5" />
+        <path d="M68 95 Q95 112 122 95 Z" fill="#B87D3B" />
+        <line x1="145" y1="60" x2="135" y2="95" stroke="#5A6370" stroke-width="1.5" />
+        <line x1="165" y1="60" x2="175" y2="95" stroke="#5A6370" stroke-width="1.5" />
+        <path d="M128 95 Q155 112 182 95 Z" fill="#1B2A4A" />
+        <text x="220" y="65" fill="#1B2A4A" font-family="Cormorant Garamond, serif" font-size="22" font-weight="700">“Deus julgará o justo e o ímpio”</text>
+        <text x="220" y="94" fill="#1E242B" font-size="13">Onde deveria haver juízo e justiça, o olhar realista encontra impiedade —</text>
+        <text x="220" y="116" fill="#1E242B" font-size="13">mas há um tempo para todo intento e toda obra diante do tribunal de Deus (v. 17).</text>
+      </svg>
+      <p class="illu-caption">Ilustração editorial — A falibilidade dos tribunais terrenos não anula o juízo soberano de Deus.</p>
+    </div>
+
+    <h4>7.1. Versículo 16 — A injustiça no lugar da justiça</h4>
+    <div class="scripture-quote">
+      “Vi mais debaixo do sol que no lugar do juízo havia impiedade, e no lugar da justiça havia impiedade.”
+      <cite>Eclesiastes 3:16</cite>
+    </div>
+    <p>O Pregador agora apresenta uma realidade que parece contradizer a ordem observada nos versículos anteriores. Ele olha para a sociedade e encontra injustiça justamente onde deveria existir justiça.</p>
+    <p>O lugar do juízo deveria ser o ambiente em que a verdade prevalecesse. O lugar da justiça deveria proteger os inocentes e corrigir os culpados. Entretanto, o Pregador encontra corrupção, perversidade e abuso.</p>
+    <p>Essa observação é extremamente atual. A existência de autoridades não garante a presença da justiça. A existência de instituições não garante que suas decisões sejam corretas. A aparência de legalidade não significa necessariamente que exista integridade.</p>
+    <p>O texto reconhece que a realidade social é marcada por contradições. Pessoas inocentes podem ser prejudicadas. Pessoas perversas podem ocupar posições de autoridade. A justiça humana pode falhar.</p>
+    <p><strong>Lição espiritual:</strong> não confunda poder com justiça, posição com integridade ou aparência com verdade.</p>
+
+    <h4>7.2. Versículo 17 — Deus julgará o justo e o ímpio</h4>
+    <div class="scripture-quote">
+      “Eu disse no meu coração: Deus julgará o justo e o ímpio; porque há um tempo para todo intento e para toda obra.”
+      <cite>Eclesiastes 3:17</cite>
+    </div>
+    <p>Aqui está a resposta teológica à injustiça observada no versículo anterior. A justiça humana pode falhar, mas a justiça divina não está limitada às instituições humanas. Deus julgará o justo e o ímpio.</p>
+    <p>Essa declaração não significa que os justos nunca sofrerão injustiças nesta vida. O próprio livro de Eclesiastes reconhece o contrário. O que o texto afirma é que a injustiça presente não representa o resultado definitivo da história. Existe uma realidade de julgamento diante de Deus.</p>
+    <p>O versículo também retoma a linguagem do tempo. Assim como existem ocasiões para os acontecimentos da vida, existe também um momento de prestação de contas.</p>
+    <p><strong>Lição espiritual:</strong> não permita que a injustiça do mundo destrua sua confiança na justiça de Deus. Isso não significa permanecer passivo diante da injustiça. Pelo contrário: devemos agir com honestidade, defender a verdade, proteger os vulneráveis e praticar a justiça. Mas não devemos assumir que nossa percepção limitada representa a decisão final de Deus.</p>
+
+    <h4>7.3. Uma conexão importante: Romanos 12:19–21</h4>
+    <p>O apóstolo Paulo ensina que a vingança não deve governar a conduta cristã. A responsabilidade pelo juízo pertence a Deus.</p>
+    <p>Isso não significa tolerar o mal ou abandonar a busca por justiça. Significa não transformar a vingança pessoal em princípio de vida. O cristão pode buscar proteção, justiça legítima e responsabilização, sem cultivar o desejo de destruir quem o prejudicou.</p>
+  </article>
+
+  <!-- SEÇÃO 8 -->
+  <article class="card" id="sec-8">
+    <h3>8. Eclesiastes 3:18–21 — A mortalidade humana e a fragilidade da existência</h3>
+
+    <div class="illu-box">
+      <svg viewBox="0 0 680 165" role="img" aria-label="Ilustração do pó da terra e do sopro de vida em Eclesiastes 3:18–21">
+        <rect x="0" y="0" width="680" height="165" rx="12" fill="#EAF0EB" stroke="#C7D4C9" />
+        <path d="M90 128 Q130 92 170 128 Z" fill="#8C6239" />
+        <circle cx="115" cy="116" r="4" fill="#B87D3B" />
+        <circle cx="138" cy="112" r="5" fill="#B87D3B" />
+        <circle cx="152" cy="120" r="3.5" fill="#B87D3B" />
+        <path d="M130 82 C130 62, 150 56, 150 38" fill="none" stroke="#1B2A4A" stroke-width="2" stroke-dasharray="3 3" />
+        <text x="215" y="62" fill="#1B2A4A" font-family="Cormorant Garamond, serif" font-size="22" font-weight="700">Fragilidade física sob o sol e limite da observação</text>
+        <text x="215" y="90" fill="#1E242B" font-size="13">“Todos são pó e todos ao pó tornarão” (v. 20; cf. Gn 3:19) — confrontando a soberba</text>
+        <text x="215" y="112" fill="#1E242B" font-size="13">humana sem anular a singularidade da imagem de Deus (Gn 1:26–27) nem a esperança da ressurreição.</text>
+      </svg>
+      <p class="illu-caption">Ilustração editorial — A mortalidade partilhada com os animais expõe a fragilidade humana e convida à humildade.</p>
+    </div>
+
+    <p>Esta é uma das partes mais difíceis do capítulo. O Pregador observa que seres humanos e animais compartilham uma condição fundamental: ambos estão sujeitos à morte.</p>
+    <p>É importante compreender o argumento dentro de seu contexto. Ele não está oferecendo aqui uma exposição completa sobre o destino eterno da alma. Está observando a mortalidade a partir da experiência visível da vida debaixo do sol.</p>
+
+    <h4>8.1. Versículo 18 — Deus prova os seres humanos</h4>
+    <div class="scripture-quote">
+      “Disse eu no meu coração, quanto a condição dos filhos dos homens, que Deus os prova, para que assim possam ver que são em si mesmos como os animais.”
+      <cite>Eclesiastes 3:18</cite>
+    </div>
+    <p>O texto apresenta a fragilidade humana. O ser humano possui inteligência, capacidade moral, consciência e responsabilidade espiritual. Entretanto, quando observamos a mortalidade física, encontramos uma realidade compartilhada com os animais. Ambos nascem, respiram, vivem e morrem.</p>
+    <p>A expressão traduzida como Deus os prova também pode ser compreendida no sentido de que a condição humana é exposta ou demonstrada, revelando ao ser humano sua fragilidade. O ponto central é a confrontação da soberba humana. A humanidade pode desenvolver tecnologia, construir cidades, acumular conhecimento e conquistar posições importantes. Mas não consegue eliminar a mortalidade por seus próprios meios.</p>
+    <p><strong>Lição espiritual:</strong> o reconhecimento de nossas limitações deve nos conduzir à humildade diante de Deus.</p>
+
+    <h4>8.2. Versículo 19 — O mesmo destino físico</h4>
+    <div class="scripture-quote">
+      “Porque o que sucede aos filhos dos homens, isso mesmo também sucede aos animais; a mesma coisa lhes sucede: como morre um, assim morre o outro...”
+      <cite>Eclesiastes 3:19</cite>
+    </div>
+    <p>O Pregador observa a realidade física da morte. O corpo humano e o corpo animal estão sujeitos à deterioração. A respiração cessa. A vida física termina. O texto enfatiza a transitoriedade da existência corporal.</p>
+    <p>Não devemos interpretar essa observação como se a Bíblia estivesse afirmando que o ser humano não possui nenhuma dimensão espiritual ou que não existe diferença entre a responsabilidade humana e a existência animal. Outras passagens apresentam claramente a singularidade do ser humano como criatura feita à imagem de Deus (Gênesis 1:26–27).</p>
+    <p>A questão aqui é a mortalidade. Diante da morte física, a condição humana revela sua vulnerabilidade.</p>
+    <p><strong>Lição espiritual:</strong> nossas conquistas terrenas não anulam nossa dependência do Criador.</p>
+
+    <h4>8.3. Versículo 20 — Todos procedem do pó</h4>
+    <div class="scripture-quote">
+      “Todos vão para um lugar; todos são pó e todos ao pó tornarão.”
+      <cite>Eclesiastes 3:20</cite>
+    </div>
+    <p>Essa declaração remete diretamente a Gênesis 3:19: <em>“Porque és pó e em pó te tornarás.”</em></p>
+    <p>O ser humano foi formado do pó da terra e está sujeito ao retorno à terra. A passagem confronta a ilusão de permanência. Não importa quanto alguém acumulou, qual posição ocupou ou quanto poder exerceu: a condição física humana permanece limitada.</p>
+    <p>O orgulho perde sua justificativa diante da mortalidade. A verdadeira grandeza não está em fingir que somos eternos nesta existência, mas em viver com responsabilidade diante daquele que nos criou.</p>
+    <p><strong>Aplicação:</strong> não desperdice sua vida perseguindo apenas aquilo que termina com a morte. Invista também naquilo que possui valor espiritual: fé, caráter, amor, justiça, serviço e comunhão com Deus.</p>
+
+    <h4>8.4. Versículo 21 — O espírito humano e o espírito animal</h4>
+    <div class="scripture-quote">
+      “Quem sabe que o espírito dos filhos dos homens sobe para cima e que o espírito dos animais desce para baixo da terra?”
+      <cite>Eclesiastes 3:21</cite>
+    </div>
+    <p>Esse versículo exige cuidado especial. A pergunta pode expressar uma dificuldade humana de conhecer, por observação, o destino do espírito. A palavra traduzida como espírito nesse versículo também pode significar sopro ou fôlego de vida.</p>
+    <p>O Pregador está confrontando a limitação do conhecimento humano diante da morte. Ele observa o corpo e reconhece que não pode, apenas pela experiência empírica, explicar integralmente o que acontece depois da morte. Isso não significa que toda a revelação bíblica sobre a existência após a morte esteja negada. Precisamos interpretar o versículo dentro do argumento do capítulo e em harmonia com o restante das Escrituras.</p>
+    <p>Outras passagens bíblicas ampliam essa compreensão:</p>
+    <ul>
+      <li><strong>Gênesis 2:7</strong> — Deus concede o fôlego da vida.</li>
+      <li><strong>Daniel 12:2</strong> — apresenta a esperança da ressurreição.</li>
+      <li><strong>João 11:25–26</strong> — Jesus declara ser a ressurreição e a vida.</li>
+      <li><strong>2 Coríntios 5:1–8</strong> — Paulo trata da esperança além da existência terrena.</li>
+      <li><strong>1 Coríntios 15:20–22</strong> — apresenta Cristo como as primícias dos que dormem.</li>
+    </ul>
+    <p><strong>Lição espiritual:</strong> a limitação da observação humana não deve ser confundida com a ausência de revelação divina.</p>
+
+    <h4>8.5. Uma distinção teológica essencial</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Questão</th>
+            <th>O que Eclesiastes 3 enfatiza</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Mortalidade</strong></td><td>O corpo humano está sujeito à morte.</td></tr>
+          <tr><td><strong>Fragilidade</strong></td><td>O ser humano não controla a duração da vida.</td></tr>
+          <tr><td><strong>Limitação</strong></td><td>A observação humana não revela todos os mistérios da existência.</td></tr>
+          <tr><td><strong>Humildade</strong></td><td>Não devemos nos considerar autossuficientes.</td></tr>
+          <tr><td><strong>Revelação</strong></td><td>O capítulo deve ser interpretado em harmonia com o conjunto das Escrituras.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <!-- SEÇÃO 9 -->
+  <article class="card" id="sec-9">
+    <h3>9. Eclesiastes 3:22 — A responsabilidade de viver o presente</h3>
+
+    <h4>9.1. O versículo final</h4>
+    <div class="scripture-quote">
+      “Assim que tenho visto que não há coisa melhor do que alegrar-se o homem nas suas obras, porque essa é a sua porção; pois quem o fará voltar para ver o que será depois dele?”
+      <cite>Eclesiastes 3:22</cite>
+    </div>
+    <p>O capítulo termina retomando a importância de desfrutar o trabalho e a vida presente. O Pregador reconhece que não temos domínio sobre o que acontecerá depois de nossa morte. Não podemos retornar para acompanhar todos os acontecimentos futuros nem controlar a maneira como as gerações seguintes conduzirão a história.</p>
+    <p>Essa constatação não deve gerar desespero. Ela deve produzir uma compreensão mais madura do presente. A vida que recebemos é a oportunidade de agir, amar, trabalhar, servir e desfrutar os dons de Deus. Não temos garantia de que poderemos realizar amanhã aquilo que hoje está ao nosso alcance.</p>
+
+    <h4>9.2. O que significa nossa porção?</h4>
+    <p>A expressão porção indica aquilo que cabe ao ser humano em sua existência. O Pregador não está defendendo uma vida egoísta, centrada apenas no prazer pessoal. Ele está ensinando a reconhecer o valor da experiência presente.</p>
+    <p>Nossa porção inclui:</p>
+    <ul>
+      <li>O trabalho que realizamos.</li>
+      <li>As responsabilidades que assumimos.</li>
+      <li>Os relacionamentos que cultivamos.</li>
+      <li>As oportunidades que recebemos.</li>
+      <li>A possibilidade de praticar o bem.</li>
+      <li>A alegria que podemos experimentar.</li>
+      <li>A gratidão pelo que Deus nos concede.</li>
+    </ul>
+    <p>A grande lição é esta: não permita que a preocupação com o amanhã roube a responsabilidade e a alegria de viver corretamente hoje.</p>
+  </article>
+
+  <!-- PARTE II -->
+  <div id="parte-2" class="part-header">
+    <div>
+      <span class="part-kicker">Parte II • Síntese Exegética e Teológica</span>
+      <h2>Fundamentos Doutrinários, Conexões Bíblicas e Cristologia</h2>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 10 -->
+  <article class="card" id="sec-10">
+    <h3>10. As grandes verdades espirituais de Eclesiastes 3</h3>
+    <ol>
+      <li><strong>O tempo não está inteiramente sob nosso controle.</strong> Existem acontecimentos que ultrapassam nossa capacidade de previsão e domínio.</li>
+      <li><strong>Deus governa a história.</strong> Sua sabedoria e soberania não estão limitadas à compreensão humana.</li>
+      <li><strong>O ser humano possui uma inquietação pela eternidade.</strong> A busca por significado ultrapassa as necessidades imediatas.</li>
+      <li><strong>A vida presente é um dom.</strong> Devemos desfrutar com gratidão o trabalho, os relacionamentos e as oportunidades.</li>
+      <li><strong>A injustiça não terá a palavra final.</strong> Deus julgará o justo e o ímpio.</li>
+      <li><strong>A mortalidade deve produzir humildade.</strong> Nossa existência física é limitada e dependente do Criador.</li>
+      <li><strong>A sabedoria consiste em viver bem cada oportunidade.</strong> O futuro pertence a Deus; a responsabilidade de hoje está diante de nós.</li>
+    </ol>
+  </article>
+
+  <!-- SEÇÃO 11 -->
+  <article class="card" id="sec-11">
+    <h3>11. O que Eclesiastes 3 NÃO está ensinando</h3>
+    <p>É tão importante compreender o que o capítulo ensina quanto evitar interpretações equivocadas.</p>
+    <ol>
+      <li><strong>Não ensina fatalismo.</strong> O texto não afirma que nossas escolhas não possuem importância. O capítulo 3:17 apresenta a realidade do juízo de Deus sobre as obras humanas.</li>
+      <li><strong>Não ensina que o pecado é aprovado por Deus.</strong> A existência de um tempo de guerra ou de matar não significa autorização para a violência ou para o assassinato.</li>
+      <li><strong>Não ensina que devemos aceitar passivamente a injustiça.</strong> O versículo 16 denuncia a perversidade no lugar da justiça. O versículo 17 afirma que Deus julgará.</li>
+      <li><strong>Não ensina que a tristeza representa falta de fé.</strong> O choro e o luto fazem parte da experiência humana. A Bíblia reconhece a dor.</li>
+      <li><strong>Não ensina que devemos abandonar o planejamento.</strong> Planejar é legítimo. O problema é imaginar que podemos controlar o futuro.</li>
+      <li><strong>Não ensina que o prazer é o objetivo supremo da existência.</strong> O texto une alegria e prática do bem, sempre reconhecendo que os dons da vida procedem de Deus.</li>
+      <li><strong>Não ensina que o ser humano e os animais são espiritualmente idênticos.</strong> A comparação do capítulo está centrada na mortalidade e nos limites da percepção humana.</li>
+    </ol>
+  </article>
+
+  <!-- SEÇÃO 12 -->
+  <article class="card" id="sec-12">
+    <h3>12. Conexões bíblicas fundamentais</h3>
+    <p>O capítulo de Eclesiastes dialoga com diversas passagens das Escrituras. Essas conexões ajudam a compreender seu significado dentro da revelação bíblica.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Assunto</th>
+            <th>Referência</th>
+            <th>Relação com Eclesiastes 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Soberania de Deus</td><td>Salmos 90:2</td><td>Deus é eterno.</td></tr>
+          <tr><td>Tempo e propósito</td><td>Atos 1:7</td><td>Os tempos pertencem à autoridade do Pai.</td></tr>
+          <tr><td>Planejamento humano</td><td>Provérbios 16:9</td><td>O ser humano planeja, mas Deus dirige seus passos.</td></tr>
+          <tr><td>Limites humanos</td><td>Isaías 55:8–9</td><td>Os pensamentos e caminhos de Deus ultrapassam os nossos.</td></tr>
+          <tr><td>Eternidade</td><td>Salmos 90:12</td><td>Precisamos reconhecer a brevidade da vida.</td></tr>
+          <tr><td>Gratidão</td><td>1 Tessalonicenses 5:18</td><td>Devemos cultivar gratidão em todas as circunstâncias.</td></tr>
+          <tr><td>Alegria e trabalho</td><td>Colossenses 3:23</td><td>Trabalhar de coração como para o Senhor.</td></tr>
+          <tr><td>Justiça divina</td><td>Romanos 2:6</td><td>Deus retribuirá a cada um segundo suas obras.</td></tr>
+          <tr><td>Vingança</td><td>Romanos 12:19</td><td>O juízo pertence a Deus.</td></tr>
+          <tr><td>Mortalidade</td><td>Gênesis 3:19</td><td>O ser humano retorna ao pó.</td></tr>
+          <tr><td>Ressurreição</td><td>João 11:25–26</td><td>Cristo é a ressurreição e a vida.</td></tr>
+          <tr><td>Esperança eterna</td><td>1 Coríntios 15:20–22</td><td>Cristo venceu a morte.</td></tr>
+          <tr><td>Dependência de Deus</td><td>Tiago 4:13–15</td><td>O amanhã deve ser colocado diante da vontade do Senhor.</td></tr>
+          <tr><td>Brevidade da vida</td><td>Tiago 4:14</td><td>A vida é como uma neblina passageira.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>12.1. Tiago 4:13–15 — Uma aplicação especialmente importante</h4>
+    <p>Tiago apresenta uma advertência diretamente relacionada ao pensamento de Eclesiastes. Ele fala sobre pessoas que fazem planos como se tivessem domínio absoluto sobre o amanhã.</p>
+    <p>A orientação apostólica não é abandonar os projetos, mas reconhecer nossa dependência de Deus. A expressão: <em>“Se o Senhor quiser, e se vivermos, faremos isto ou aquilo”</em> representa uma atitude de humildade.</p>
+    <p>Não é uma fórmula verbal que precisa ser repetida mecanicamente. É uma postura interior que reconhece que nossos projetos estão subordinados à vontade de Deus. Eclesiastes 3 e Tiago 4 ensinam uma mesma realidade: podemos planejar, mas não somos senhores do tempo.</p>
+  </article>
+
+  <!-- SEÇÃO 13 -->
+  <article class="card" id="sec-13">
+    <h3>13. Eclesiastes 3 à luz de Jesus Cristo</h3>
+    <p>O capítulo não apresenta diretamente o nome de Jesus, pois pertence ao Antigo Testamento. Entretanto, suas grandes questões encontram desenvolvimento e resposta na revelação do Novo Testamento.</p>
+
+    <h4>13.1. Jesus viveu segundo o propósito do Pai</h4>
+    <p>Em João 7:6, Jesus declara que seu tempo ainda não havia chegado. Em João 12:23, anuncia que chegou a hora de o Filho do Homem ser glorificado. Em João 13:1, o Evangelho destaca que Jesus sabia que havia chegado sua hora de passar deste mundo para o Pai.</p>
+    <p>Essas declarações revelam que a missão de Cristo não foi conduzida por improvisação ou ambição humana. Ele viveu em obediência ao propósito do Pai. O tempo da missão de Jesus estava relacionado ao plano redentor de Deus.</p>
+
+    <h4>13.2. Jesus experimentou a realidade das emoções humanas</h4>
+    <p>Eclesiastes fala de chorar e rir, prantear e dançar. Nos Evangelhos, vemos Jesus experimentando emoções humanas reais:</p>
+    <ul>
+      <li>Chorou diante da morte de Lázaro (João 11:35).</li>
+      <li>Demonstrou compaixão diante do sofrimento humano (Mateus 9:36).</li>
+      <li>Regozijou-se no Espírito Santo (Lucas 10:21).</li>
+      <li>Experimentou profunda angústia no Getsêmani (Mateus 26:38).</li>
+    </ul>
+    <p>Isso nos mostra que a espiritualidade bíblica não exige negar a humanidade. Cristo não tratou a dor como algo inexistente. Ele entrou na realidade do sofrimento humano.</p>
+
+    <h4>13.3. Jesus enfrentou a injustiça</h4>
+    <p>Eclesiastes 3:16 observa a corrupção nos lugares destinados à justiça. A história de Jesus também apresenta injustiça judicial, falsas acusações, manipulação de autoridades e condenação de um inocente.</p>
+    <p>Entretanto, a cruz não foi o fim. A ressurreição representa a vitória de Deus sobre o pecado e a morte. O que parecia derrota tornou-se o centro da obra redentora. Isso não significa que todo sofrimento humano terá uma explicação imediata semelhante. Significa que, em Cristo, a injustiça e a morte não possuem a palavra definitiva.</p>
+
+    <h4>13.4. Cristo responde à inquietação pela eternidade</h4>
+    <p>Eclesiastes 3:11 apresenta a eternidade no coração humano e a incapacidade de compreender integralmente a obra de Deus. No Novo Testamento, Jesus oferece uma esperança que ultrapassa os limites da existência terrena.</p>
+    <div class="scripture-quote">
+      “Eu sou a ressurreição e a vida; quem crê em mim, ainda que esteja morto, viverá.”
+      <cite>João 11:25–26</cite>
+    </div>
+    <p>Essa declaração não elimina a realidade da morte física, mas anuncia que a morte não representa o destino definitivo daqueles que pertencem a Cristo.</p>
+
+    <h4>13.5. A cruz e a ressurreição: o centro da esperança</h4>
+    <div class="illu-box">
+      <svg viewBox="0 0 680 175" role="img" aria-label="Ilustração do amanhecer sobre a cruz e o túmulo vazio na esperança cristã">
+        <defs>
+          <linearGradient id="dawnGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1B2A4A" />
+            <stop offset="65%" stop-color="#9E4732" />
+            <stop offset="100%" stop-color="#E8D5B7" />
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="680" height="175" rx="12" fill="url(#dawnGrad)" />
+        <circle cx="515" cy="112" r="38" fill="#FFF3D6" opacity="0.85" />
+        <path d="M0 132 Q220 112 440 132 T680 128 L680 175 L0 175 Z" fill="#101A2E" />
+        <!-- Cross -->
+        <rect x="155" y="42" width="10" height="86" rx="2" fill="#E8D5B7" />
+        <rect x="134" y="64" width="52" height="10" rx="2" fill="#E8D5B7" />
+        <!-- Open tomb & rolled stone -->
+        <path d="M475 132 L475 102 A22 22 0 0 1 519 102 L519 132 Z" fill="#1B2A4A" stroke="#E8D5B7" stroke-width="2" />
+        <circle cx="536" cy="122" r="14" fill="#5A6370" stroke="#E8D5B7" stroke-width="1.5" />
+        <text x="325" y="42" text-anchor="middle" fill="#FFFFFF" font-family="Cormorant Garamond, serif" font-size="22" font-weight="700">A Cruz e o Túmulo Vazio ao Amanhecer</text>
+        <text x="325" y="156" text-anchor="middle" fill="#E8D5B7" font-size="11.5">Em Cristo, a esperança ultrapassa o tempo e vence a morte (1 Coríntios 15:20–22).</text>
+      </svg>
+      <p class="illu-caption">Ilustração editorial — O amanhecer da ressurreição responde à inquietação pela eternidade apontada em Eclesiastes 3:11.</p>
+    </div>
+
+    <p>Eclesiastes nos ensina a reconhecer a fragilidade da existência. O Evangelho anuncia que Deus entrou na história humana por meio de Jesus Cristo. A morte é uma realidade. O pecado é uma realidade. A injustiça é uma realidade. Mas a ressurreição também é uma realidade central da fé cristã.</p>
+    <p>A esperança cristã não depende de conseguirmos organizar perfeitamente todas as estações da vida. Ela está fundamentada na pessoa e na obra de Jesus. Eclesiastes nos faz reconhecer a necessidade de uma esperança que ultrapasse o tempo; Cristo anuncia e oferece essa esperança.</p>
+  </article>
+
+  <!-- PARTE III -->
+  <div id="parte-3" class="part-header">
+    <div>
+      <span class="part-kicker">Parte III • Aplicação à Vida Real</span>
+      <h2>Discernimento das Estações, Princípios, Cenários e Exame Pessoal</h2>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 14 -->
+  <article class="card" id="sec-14">
+    <h3>14. Como identificar a estação que estamos vivendo?</h3>
+    <figure class="art-figure">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Caspar_David_Friedrich_-_Wanderer_above_the_Sea_of_Fog.jpeg/960px-Caspar_David_Friedrich_-_Wanderer_above_the_Sea_of_Fog.jpeg" alt="Caminhante Sobre o Mar de Névoa, pintura de Caspar David Friedrich" loading="lazy" />
+      <figcaption>
+        <strong>Discernimento diante do Horizonte que Não Controlamos</strong>
+        <em>Caminhante Sobre o Mar de Névoa</em> (Caspar David Friedrich, c. 1818): imagem de apoio à contemplação das estações da vida e da confiança em Deus quando o caminho adiante está encoberto. · <a href="https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_Sea_of_Fog.jpeg" target="_blank" rel="noopener noreferrer">Ver fonte e licença da imagem</a>
+      </figcaption>
+    </figure>
+    <p>Uma das aplicações mais importantes de Eclesiastes 3 é desenvolver discernimento para reconhecer a realidade do momento presente. Muitas dificuldades surgem porque tentamos viver uma estação de maneira inadequada.</p>
+    <ul>
+      <li>Queremos colher quando ainda precisamos plantar.</li>
+      <li>Queremos reconstruir sem antes reconhecer o que precisa ser removido.</li>
+      <li>Queremos falar quando deveríamos ouvir.</li>
+      <li>Queremos permanecer em situações que exigem mudanças.</li>
+      <li>Queremos resultados imediatos em processos que exigem amadurecimento.</li>
+    </ul>
+    <p>A seguir, uma ferramenta prática de reflexão: <strong>As estações da vida e suas respostas</strong>.</p>
+
+    <div class="seasons-grid">
+      <div class="season-card">
+        <svg viewBox="0 0 260 112" aria-hidden="true">
+          <rect x="0" y="0" width="260" height="112" rx="8" fill="#EAF0EB" />
+          <path d="M0 78 Q130 66 260 78 L260 112 L0 112 Z" fill="#4A5D4E" />
+          <path d="M130 74 C130 48, 108 42, 102 26 C122 28, 130 42, 130 56 C130 40, 140 24, 162 22 C156 42, 136 50, 130 74 Z" fill="#B87D3B" />
+        </svg>
+        <h4>Quando é tempo de plantar</h4>
+        <p style="font-size:0.9rem; margin-bottom:0;">Invista, aprenda, prepare-se, trabalhe e tenha paciência. Não exija frutos antes do amadurecimento.</p>
+      </div>
+
+      <div class="season-card">
+        <svg viewBox="0 0 260 112" aria-hidden="true">
+          <rect x="0" y="0" width="260" height="112" rx="8" fill="#FFF8E8" />
+          <circle cx="195" cy="32" r="18" fill="#E8B84B" />
+          <path d="M0 84 Q130 72 260 84 L260 112 L0 112 Z" fill="#B87D3B" />
+          <path d="M70 84 L95 36 M90 84 L115 36 M110 84 L135 36" stroke="#1B2A4A" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+        <h4>Quando é tempo de colher</h4>
+        <p style="font-size:0.9rem; margin-bottom:0;">Reconheça os resultados, agradeça e desfrute com responsabilidade o que foi construído.</p>
+      </div>
+
+      <div class="season-card">
+        <svg viewBox="0 0 260 112" aria-hidden="true">
+          <rect x="0" y="0" width="260" height="112" rx="8" fill="#F6EFE6" />
+          <path d="M0 86 L260 86 L260 112 L0 112 Z" fill="#5A6370" />
+          <path d="M128 86 L128 32 M128 52 L102 36 M128 60 L156 42" stroke="#9E4732" stroke-width="3" stroke-linecap="round" />
+          <circle cx="96" cy="76" r="4" fill="#B87D3B" />
+          <circle cx="164" cy="78" r="4" fill="#9E4732" />
+        </svg>
+        <h4>Quando é tempo de encerrar</h4>
+        <p style="font-size:0.9rem; margin-bottom:0;">Aceite os limites, aprenda com a experiência e não preserve aquilo que está impedindo um caminho saudável.</p>
+      </div>
+
+      <div class="season-card">
+        <svg viewBox="0 0 260 112" aria-hidden="true">
+          <rect x="0" y="0" width="260" height="112" rx="8" fill="#EEF2F7" />
+          <rect x="0" y="88" width="260" height="24" fill="#1B2A4A" />
+          <rect x="75" y="56" width="36" height="32" fill="#B87D3B" />
+          <rect x="115" y="40" width="36" height="48" fill="#1B2A4A" />
+          <rect x="155" y="26" width="36" height="62" fill="#4A5D4E" />
+        </svg>
+        <h4>Quando é tempo de reconstruir</h4>
+        <p style="font-size:0.9rem; margin-bottom:0;">Reavalie fundamentos, corrija erros e construa sobre princípios sólidos.</p>
+      </div>
+
+      <div class="season-card">
+        <svg viewBox="0 0 260 112" aria-hidden="true">
+          <rect x="0" y="0" width="260" height="112" rx="8" fill="#F2ECE1" />
+          <path d="M40 72 Q130 35 220 72" fill="none" stroke="#1B2A4A" stroke-width="2" stroke-dasharray="4 4" />
+          <circle cx="130" cy="56" r="16" fill="none" stroke="#B87D3B" stroke-width="2.5" />
+          <circle cx="130" cy="56" r="4" fill="#1B2A4A" />
+        </svg>
+        <h4>Quando é tempo de esperar</h4>
+        <p style="font-size:0.9rem; margin-bottom:0;">Não confunda espera com abandono. Continue fazendo o que é correto enquanto confia em Deus.</p>
+      </div>
+
+      <div class="season-card">
+        <svg viewBox="0 0 260 112" aria-hidden="true">
+          <rect x="0" y="0" width="260" height="112" rx="8" fill="#FDF3F0" />
+          <circle cx="112" cy="58" r="24" fill="none" stroke="#9E4732" stroke-width="2.5" />
+          <circle cx="148" cy="58" r="24" fill="none" stroke="#1B2A4A" stroke-width="2.5" />
+        </svg>
+        <h4>Quando é tempo de amar e cuidar</h4>
+        <p style="font-size:0.9rem; margin-bottom:0;">Demonstre presença, perdão, atenção, generosidade e compromisso com as pessoas.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- SEÇÃO 15 -->
+  <article class="card" id="sec-15">
+    <h3>15. Sete princípios para aplicar Eclesiastes 3 no cotidiano</h3>
+    <ol>
+      <li><strong>Não tente controlar aquilo que pertence a Deus.</strong> Você pode organizar sua agenda, administrar seus recursos e planejar seus objetivos. Mas não pode garantir todos os acontecimentos.</li>
+      <li><strong>Não desperdice o tempo que está disponível.</strong> O tempo não volta. Use suas oportunidades para construir algo que tenha valor.</li>
+      <li><strong>Aprenda a reconhecer quando uma fase precisa mudar.</strong> Persistência é uma virtude, mas insistência sem discernimento pode se transformar em desgaste.</li>
+      <li><strong>Não transforme o sofrimento em identidade permanente.</strong> Existe tempo de chorar, mas também existe tempo de reconstruir a esperança.</li>
+      <li><strong>Pratique o bem enquanto pode.</strong> Não espere circunstâncias perfeitas para agir com bondade, honestidade e generosidade.</li>
+      <li><strong>Desfrute os presentes de Deus.</strong> Agradeça pelo alimento, pelo trabalho, pela família, pelas amizades, pelas oportunidades e pela possibilidade de servir.</li>
+      <li><strong>Viva com consciência da eternidade.</strong> Não permita que objetivos passageiros ocupem todo o espaço da sua existência.</li>
+    </ol>
+  </article>
+
+  <!-- SEÇÃO 16 -->
+  <article class="card" id="sec-16">
+    <h3>16. Exemplos práticos: como o capítulo conversa com nossas experiências</h3>
+
+    <h4>Exemplo 1 — Quando um relacionamento termina</h4>
+    <p>O encerramento de um relacionamento pode trazer tristeza, perguntas e sensação de perda. Eclesiastes não exige que a pessoa ignore o sofrimento. Há tempo de chorar e tempo de prantear. Mas também há tempo de reconstruir, aprender, amadurecer e voltar a viver com propósito.</p>
+    <p>O ensinamento não é apagar a história, mas impedir que uma experiência passada determine definitivamente o futuro. <em>Referências: Eclesiastes 3:4; Salmos 34:18; Filipenses 3:13–14.</em></p>
+
+    <h4>Exemplo 2 — Quando um projeto demora a produzir resultados</h4>
+    <p>Uma pessoa pode trabalhar, estudar, investir e não alcançar imediatamente aquilo que deseja. Eclesiastes 3:2 apresenta a diferença entre plantar e arrancar o que foi plantado. Nem todo processo produz resultados imediatos.</p>
+    <p>É necessário avaliar se o projeto ainda está no período de desenvolvimento, se precisa de correção ou se chegou o momento de encerrá-lo. <em>Referências: Gálatas 6:9; Tiago 5:7–8.</em></p>
+
+    <h4>Exemplo 3 — Quando enfrentamos uma injustiça</h4>
+    <p>Podemos encontrar situações em que a verdade não prevalece imediatamente. O capítulo reconhece que existe perversidade no lugar da justiça. Mas também afirma que Deus julgará o justo e o ímpio.</p>
+    <p>A resposta não é alimentar vingança, nem abandonar a busca por justiça. É agir corretamente e confiar que a justiça divina ultrapassa os limites dos sistemas humanos. <em>Referências: Eclesiastes 3:16–17; Romanos 12:19–21; Miqueias 6:8.</em></p>
+
+    <h4>Exemplo 4 — Quando conquistamos algo importante</h4>
+    <p>Depois de alcançar um objetivo, muitas pessoas imediatamente começam a perseguir outro. A conquista perde seu significado porque nunca existe tempo para desfrutar aquilo que foi alcançado.</p>
+    <p>Eclesiastes 3:12–13 ensina a reconhecer a alegria como presente de Deus. É legítimo estabelecer novos objetivos, mas também é necessário agradecer e desfrutar os frutos do trabalho. <em>Referências: Eclesiastes 3:12–13; 1 Timóteo 6:17–19.</em></p>
+
+    <h4>Exemplo 5 — Quando não conseguimos entender o que Deus está fazendo</h4>
+    <p>Existem períodos em que nossas perguntas permanecem sem resposta. Não sabemos por que determinada porta se fechou, por que um processo demorou ou por que uma situação tomou determinado rumo.</p>
+    <p>Eclesiastes 3:11 reconhece essa limitação. Nossa incapacidade de compreender tudo não significa que Deus perdeu o controle. É possível continuar sendo fiel mesmo quando ainda não temos todas as explicações. <em>Referências: Deuteronômio 29:29; Romanos 11:33; Provérbios 3:5–6.</em></p>
+  </article>
+
+  <!-- SEÇÃO 17 -->
+  <article class="card" id="sec-17">
+    <h3>17. Uma reflexão profunda: estamos vivendo ou apenas tentando chegar ao próximo momento?</h3>
+    <p>Essa pergunta merece atenção especial. Muitas vezes, a vida se transforma em uma sucessão de expectativas:</p>
+    <ul>
+      <li>Quando eu conquistar isso, serei feliz.</li>
+      <li>Quando resolver aquele problema, terei paz.</li>
+      <li>Quando alcançar determinada posição, poderei descansar.</li>
+      <li>Quando tudo estiver organizado, aproveitarei a vida.</li>
+      <li>Quando as circunstâncias melhorarem, começarei a fazer o que é importante.</li>
+    </ul>
+    <p>Entretanto, a existência continua acontecendo enquanto esperamos. O tempo que temos hoje não é um ensaio para uma vida futura. É parte da própria vida.</p>
+    <p>Isso não significa abandonar sonhos, projetos ou ambições legítimas. Significa não sacrificar completamente o presente em nome de um futuro que não controlamos. Eclesiastes 3:13 chama nossa atenção para o fato de que desfrutar o bem do trabalho é um dom de Deus.</p>
+    <p>Existe uma diferença entre trabalhar para viver e viver exclusivamente para trabalhar. Existe uma diferença entre buscar crescimento e transformar a conquista em um ídolo. Existe uma diferença entre esperar o amanhã e deixar de viver hoje. A maturidade espiritual está em trabalhar pelo futuro sem desprezar o presente.</p>
+  </article>
+
+  <!-- SEÇÃO 18 -->
+  <article class="card" id="sec-18">
+    <h3>18. Perguntas para exame pessoal</h3>
+    <p>Estas perguntas podem ser utilizadas em um momento de oração, meditação ou estudo individual.</p>
+    <ul class="exam-list">
+      <li class="exam-item"><input type="checkbox" id="q1" /><label for="q1">1. Tenho tentado controlar situações que estão além da minha capacidade?</label></li>
+      <li class="exam-item"><input type="checkbox" id="q2" /><label for="q2">2. Estou vivendo adequadamente a estação atual ou resistindo a mudanças necessárias?</label></li>
+      <li class="exam-item"><input type="checkbox" id="q3" /><label for="q3">3. Existe algo que preciso plantar, mas estou exigindo resultados imediatos?</label></li>
+      <li class="exam-item"><input type="checkbox" id="q4" /><label for="q4">4. Existe algo que preciso encerrar, mas continuo preservando por medo?</label></li>
+      <li class="exam-item"><input type="checkbox" id="q5" /><label for="q5">5. Tenho permitido que a tristeza ocupe um espaço maior do que deveria?</label></li>
+      <li class="exam-item"><input type="checkbox" id="q6" /><label for="q6">6. Tenho valorizado as pessoas enquanto estão presentes?</label></li>
+      <li class="exam-item"><input type="checkbox" id="q7" /><label for="q7">7. Consigo desfrutar aquilo que Deus já me concedeu?</label></li>
+      <li class="exam-item"><input type="checkbox" id="q8" /><label for="q8">8. Tenho praticado o bem ou estou concentrado apenas nas minhas conquistas?</label></li>
+      <li class="exam-item"><input type="checkbox" id="q9" /><label for="q9">9. Como reajo quando presencio injustiças?</label></li>
+      <li class="exam-item"><input type="checkbox" id="q10" /><label for="q10">10. Minha confiança em Deus permanece quando não compreendo os acontecimentos?</label></li>
+      <li class="exam-item"><input type="checkbox" id="q11" /><label for="q11">11. Tenho vivido consciente de que minha existência terrena é limitada?</label></li>
+      <li class="exam-item"><input type="checkbox" id="q12" /><label for="q12">12. Que mudança concreta preciso realizar a partir desta leitura?</label></li>
+    </ul>
+  </article>
+
+  <!-- SEÇÃO 19 -->
+  <article class="notebook-card" id="caderno-reflexao">
+    <h3>19. Exercício prático — Identificando minha estação atual</h3>
+    <p>Este exercício foi organizado para transformar o estudo em uma decisão concreta.</p>
+    <h4>Meu momento diante de Deus</h4>
+    <p style="font-size:0.9rem; color:var(--muted);">Responda com sinceridade. Suas respostas são salvas automaticamente neste navegador e podem ser copiadas com um clique.</p>
+
+    <div class="field-group">
+      <label for="refEstacao">1. Qual estação descreve melhor o momento que estou vivendo?</label>
+      <textarea id="refEstacao" placeholder="Ex.: Tempo de plantar e esperar amadurecimento, tempo de reconstruir, tempo de colher com gratidão..."></textarea>
+    </div>
+
+    <div class="field-group">
+      <label for="refAceitar">2. O que preciso aceitar?</label>
+      <textarea id="refAceitar" placeholder="Ex.: Limites do tempo, processos que não dependem apenas do meu controle..."></textarea>
+    </div>
+
+    <div class="field-group">
+      <label for="refMudar">3. O que preciso mudar?</label>
+      <textarea id="refMudar" placeholder="Ex.: Ansiedade pelo futuro, excesso de trabalho sem descanso, resistência a encerrar ciclos..."></textarea>
+    </div>
+
+    <div class="field-group">
+      <label for="refPreservar">4. O que preciso preservar?</label>
+      <textarea id="refPreservar" placeholder="Ex.: Comunhão com Deus, integridade, vínculos importantes, prática do bem..."></textarea>
+    </div>
+
+    <div class="field-group">
+      <label for="refAtitude">5. Qual atitude concreta tomarei nesta semana?</label>
+      <textarea id="refAtitude" placeholder="Descreva um passo prático e mensurável para esta semana..."></textarea>
+    </div>
+
+    <div class="notebook-actions">
+      <button type="button" class="btn-tool btn-primary" id="btnCopiarReflexoes">Copiar minhas reflexões</button>
+      <button type="button" class="btn-tool" id="btnLimparReflexoes">Limpar campos</button>
+      <span class="status-msg" id="copyStatus" aria-live="polite"></span>
+    </div>
+  </article>
+
+  <!-- PARTE IV -->
+  <div id="parte-4" class="part-header">
+    <div>
+      <span class="part-kicker">Parte IV • Conclusão Espiritual</span>
+      <h2>Síntese Pastoral, Oração Final e Referências</h2>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 20 -->
+  <article class="card" id="sec-20">
+    <h3>20. O que devemos guardar no coração depois de estudar Eclesiastes 3?</h3>
+    <p>O capítulo começa apresentando os diferentes tempos da vida e termina lembrando que não controlamos o que acontecerá depois de nossa existência terrena. Entre esses dois extremos, encontramos uma orientação espiritual muito profunda.</p>
+    <p>Precisamos aprender a viver com sabedoria. Não somos donos do tempo. Não conhecemos integralmente o futuro. Não conseguimos explicar todos os acontecimentos. Não temos poder para impedir todas as perdas. Não conseguimos garantir que a justiça humana prevalecerá em todas as circunstâncias. Não podemos prolongar indefinidamente nossa existência.</p>
+    <p>Mas podemos escolher como responder às oportunidades e responsabilidades que temos diante de nós. Podemos plantar. Podemos construir. Podemos amar. Podemos cuidar. Podemos falar a verdade. Podemos praticar o bem. Podemos agradecer. Podemos desfrutar os presentes de Deus. Podemos buscar a justiça. Podemos reconhecer nossos limites.</p>
+    <p>E, acima de tudo, podemos confiar no Senhor. A grande mensagem de Eclesiastes 3 não é que devemos simplesmente esperar que o tempo resolva tudo. É que precisamos reconhecer que nossa vida está inserida em uma realidade maior, governada por Deus, e que cada dia deve ser vivido com responsabilidade, humildade e propósito.</p>
+    <p>Não precisamos conhecer todas as estações que ainda virão. Precisamos permanecer fiéis a Deus na estação em que estamos.</p>
+  </article>
+
+  <!-- SEÇÃO 21 -->
+  <article class="card" id="sec-21">
+    <h3>21. Uma mensagem final: o tempo passa, mas Deus permanece</h3>
+
+    <div class="illu-box">
+      <svg viewBox="0 0 680 180" role="img" aria-label="Ilustração de vale sereno envolto em névoa matinal sob montanhas iluminadas ao amanhecer">
+        <defs>
+          <linearGradient id="mtnSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2A3E63" />
+            <stop offset="60%" stop-color="#7B8FA6" />
+            <stop offset="100%" stop-color="#F2ECE1" />
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="680" height="180" rx="12" fill="url(#mtnSky)" />
+        <polygon points="80,125 210,55 340,125" fill="#4A5D4E" />
+        <polygon points="270,125 430,45 590,125" fill="#37483B" />
+        <rect x="0" y="105" width="680" height="32" fill="rgba(255,255,255,0.52)" />
+        <path d="M0 128 Q170 116 340 128 T680 126 L680 180 L0 180 Z" fill="#4A5D4E" />
+      </svg>
+      <p class="illu-caption">Ilustração editorial — As névoas e estações mudam, mas o governo e a fidelidade de Deus permanecem.</p>
+    </div>
+
+    <p>Talvez você esteja vivendo um tempo de plantar. Talvez esteja esperando respostas. Talvez esteja enfrentando uma reconstrução. Talvez esteja atravessando um período de perdas. Talvez esteja colhendo resultados de anos de dedicação. Talvez esteja vivendo um momento de alegria que precisa aprender a desfrutar.</p>
+    <p>Seja qual for a estação, existe uma verdade que precisa permanecer no seu coração: o tempo humano é limitado, mas Deus não está limitado pelo tempo.</p>
+    <p>O que hoje parece incompreensível não está necessariamente fora do alcance da sabedoria divina. O que hoje exige paciência não precisa ser tratado com desespero. O que precisa ser corrigido não deve ser protegido pelo orgulho. O que precisa ser encerrado não deve ser mantido apenas pelo medo. E o que Deus colocou diante de você como responsabilidade não deve ser negligenciado.</p>
+    <p>Viva o presente com gratidão. Trabalhe com dedicação. Ame com sinceridade. Pratique o bem. Busque a justiça. Preserve a fé. E, quando não compreender o caminho, continue confiando naquele que conhece o princípio e o fim.</p>
+  </article>
+
+  <!-- SEÇÃO 22 -->
+  <article class="card" id="sec-22">
+    <h3>22. Oração final — Senhor, ensina-me a viver cada tempo</h3>
+    <div class="prayer-box">
+      <p>Senhor meu Deus,</p>
+      <p>Obrigado pela oportunidade de compreender um pouco mais da Tua Palavra. Ao estudar Eclesiastes 3, reconheço que muitas vezes tento controlar acontecimentos que não estão sob meu domínio. Quero antecipar respostas, acelerar processos, evitar perdas e compreender imediatamente aquilo que acontece comigo.</p>
+      <p>Perdoa-me quando minha ansiedade ocupa o lugar da confiança. Ensina-me a reconhecer a estação que estou vivendo. Dá-me sabedoria para saber quando plantar, paciência para esperar, coragem para reconstruir, humildade para reconhecer meus erros e discernimento para compreender quando alguma coisa precisa ser encerrada.</p>
+      <p>Quando for tempo de chorar, sustenta meu coração. Quando for tempo de esperar, fortalece minha fé. Quando for tempo de trabalhar, concede-me dedicação. Quando for tempo de colher, ensina-me a agradecer. Quando for tempo de falar, coloca verdade e sabedoria em minhas palavras. Quando for tempo de permanecer em silêncio, guarda meu coração de respostas precipitadas.</p>
+      <p>Ajuda-me a não desperdiçar o presente, a valorizar as pessoas e a praticar o bem enquanto tenho oportunidade. Não permitas que minhas conquistas se tornem mais importantes do que minha comunhão contigo. Que eu não viva dominado pelo medo do amanhã nem aprisionado pelas experiências do passado.</p>
+      <p>Ensina-me a trabalhar com responsabilidade, amar com sinceridade, viver com propósito e descansar na Tua soberania. Quando eu não compreender o que estás fazendo, lembra-me de que minha visão é limitada, mas a Tua sabedoria é perfeita. E, acima de todas as coisas, mantém meus olhos voltados para Jesus Cristo, minha esperança que ultrapassa os limites desta vida.</p>
+      <p style="margin-bottom:0;">Que cada estação da minha existência seja vivida com fé, maturidade, gratidão e obediência. Em nome de Jesus. Amém.</p>
+    </div>
+  </article>
+
+  <!-- SEÇÃO 23 -->
+  <article class="card" id="sec-23">
+    <h3>23. Referências bíblicas para continuidade do estudo</h3>
+    <p>Para aprofundar os principais ensinamentos, recomenda-se a leitura integral destas passagens:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Assunto</th>
+            <th>Leitura</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>A brevidade da vida</td><td>Salmos 90</td></tr>
+          <tr><td>A soberania de Deus</td><td>Isaías 46:9–10</td></tr>
+          <tr><td>A confiança no Senhor</td><td>Provérbios 3:5–6</td></tr>
+          <tr><td>O tempo e a vontade de Deus</td><td>Tiago 4:13–17</td></tr>
+          <tr><td>A prática do bem</td><td>Gálatas 6:7–10</td></tr>
+          <tr><td>O sofrimento e a esperança</td><td>Romanos 8:18–28</td></tr>
+          <tr><td>A justiça divina</td><td>Romanos 12:17–21</td></tr>
+          <tr><td>A eternidade e a ressurreição</td><td>1 Coríntios 15</td></tr>
+          <tr><td>Cristo, a ressurreição e a vida</td><td>João 11:17–27</td></tr>
+          <tr><td>A nova criação</td><td>Apocalipse 21:1–7</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <!-- SEÇÃO 24 -->
+  <section class="key-phrase-box" id="sec-24" aria-label="Frase-chave para guardar">
+    <span class="eyebrow" style="margin-bottom:0.75rem;">24. Frase-chave para guardar</span>
+    <blockquote>
+      “Não preciso controlar o tempo, conhecer todo o futuro ou compreender todos os acontecimentos. Preciso confiar em Deus, viver o presente com sabedoria e permanecer fiel em cada estação da minha vida.”
+    </blockquote>
+    <p style="margin-bottom:0; font-size:0.88rem; color:rgba(255,255,255,0.82);">Síntese devocional de Eclesiastes 3</p>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>Eclesiastes 3 — Tudo Tem o Seu Tempo</strong> • Estudo Bíblico Completo Ilustrado &amp; Infográfico de Síntese (PMB 1.0)</p>
+  <p style="margin-bottom:0; font-size:0.78rem; opacity:0.75;">Arquivo HTML autocontido com ilustrações vetoriais integradas, roda interativa das 14 polaridades e caderno de reflexão local.</p>
+</footer>
+
+<script>
+(function () {
+  const pairsData = [
+    {
+      num: 1,
+      verse: "Ec 3:2a",
+      title: "Nascer e morrer",
+      cat: "vida",
+      catLabel: "Ciclo da Vida & Terra",
+      summary: "O início da existência e o limite da vida terrena: ninguém escolhe o momento em que nasce nem domina totalmente a duração de seus dias.",
+      lesson: "Viva com propósito enquanto possui a oportunidade de viver; não adie indefinidamente o amor, a reconciliação, a obediência e a gratidão.",
+      practice: "Não espere uma doença, uma perda ou uma despedida para reconhecer o valor das pessoas e das oportunidades que Deus colocou em sua vida."
+    },
+    {
+      num: 2,
+      verse: "Ec 3:2b",
+      title: "Plantar e arrancar o que se plantou",
+      cat: "vida",
+      catLabel: "Ciclo da Vida & Terra",
+      summary: "Imagem agrícola que distingue o tempo de semear, investir e aguardar o amadurecimento do tempo de arrancar o que já não deve permanecer.",
+      lesson: "Não confunda demora com ausência de progresso.",
+      practice: "Examine quais áreas da sua vida precisam de investimento paciente e quais precisam de correção ou encerramento."
+    },
+    {
+      num: 3,
+      verse: "Ec 3:3a",
+      title: "Matar e curar",
+      cat: "vida",
+      catLabel: "Ciclo da Vida & Terra",
+      summary: "Descreve realidades extremas da experiência humana — morte, destruição e sofrimento em contraste com restauração, cuidado e cura.",
+      lesson: "Reconheça a gravidade da vida humana e valorize tudo aquilo que promove restauração.",
+      practice: "Seja instrumento de cura, reconciliação e cuidado, em vez de alimentar atitudes que destroem pessoas."
+    },
+    {
+      num: 4,
+      verse: "Ec 3:3b",
+      title: "Derribar e edificar",
+      cat: "vida",
+      catLabel: "Ciclo da Vida & Terra",
+      summary: "Estruturas antigas ou nocivas precisam ser removidas para que novas bases firmes sejam erguidas com sabedoria e responsabilidade.",
+      lesson: "Não tenha medo de reconstruir sua vida quando perceber que determinadas estruturas não estão sustentadas pela verdade.",
+      practice: "Identifique hábitos, pensamentos e atitudes que precisam ser substituídos por práticas mais coerentes com a Palavra de Deus."
+    },
+    {
+      num: 5,
+      verse: "Ec 3:4a",
+      title: "Chorar e rir",
+      cat: "emocoes",
+      catLabel: "Emoções & Relações",
+      summary: "A vida contempla lágrimas reais e alegria genuína (cf. João 11:35); a fé bíblica não exige sorrisos artificiais nem nega a dor.",
+      lesson: "Permita-se sentir, mas não permita que uma emoção passageira determine toda a sua visão da vida.",
+      practice: "Nos dias difíceis, procure a presença de Deus. Nos dias alegres, reconheça a origem de suas bênçãos."
+    },
+    {
+      num: 6,
+      verse: "Ec 3:4b",
+      title: "Prantear e dançar",
+      cat: "emocoes",
+      catLabel: "Emoções & Relações",
+      summary: "Expressão pública ou interior do luto diante de perdas, alternada com celebração, gratidão e festa nos tempos de livramento.",
+      lesson: "Respeite o tempo de sofrimento das pessoas e aprenda a celebrar as alegrias sem culpa.",
+      practice: "Esteja presente tanto nos momentos difíceis quanto nos momentos de vitória daqueles que fazem parte da sua vida."
+    },
+    {
+      num: 7,
+      verse: "Ec 3:5a",
+      title: "Espalhar pedras e ajuntar pedras",
+      cat: "vida",
+      catLabel: "Ciclo da Vida & Terra",
+      summary: "Pedras podem ser removidas de um campo para prepará-lo ao cultivo ou ajuntadas para erguer muros e estruturas duráveis.",
+      lesson: "Não aplique a mesma solução a todas as circunstâncias.",
+      practice: "Avalie se suas ações estão adequadas ao momento ou se você está insistindo em métodos que já não produzem bons resultados."
+    },
+    {
+      num: 8,
+      verse: "Ec 3:5b",
+      title: "Abraçar e afastar-se de abraçar",
+      cat: "emocoes",
+      catLabel: "Emoções & Relações",
+      summary: "O acolhimento e a proximidade relacional têm seu lugar, assim como a prudência e os limites saudáveis quando necessário.",
+      lesson: "Amar não significa eliminar todo limite.",
+      practice: "Valorize os relacionamentos saudáveis e aprenda a estabelecer limites quando a convivência se torna destrutiva."
+    },
+    {
+      num: 9,
+      verse: "Ec 3:6a",
+      title: "Buscar e perder",
+      cat: "posse",
+      catLabel: "Posse, Fala & Conflito",
+      summary: "Momentos de procura, empenho e conquista convivem com situações em que algo se perde apesar de nossos esforços.",
+      lesson: "Faça o que está ao seu alcance, mas não transforme o resultado em seu senhor.",
+      practice: "Persista no que é correto, mas aprenda a lidar com aquilo que não pode recuperar."
+    },
+    {
+      num: 10,
+      verse: "Ec 3:6b",
+      title: "Guardar e deitar fora",
+      cat: "posse",
+      catLabel: "Posse, Fala & Conflito",
+      summary: "Discernimento para reter o que edifica — verdade, fé, sabedoria, memórias boas — e descartar ressentimentos e pesos inúteis.",
+      lesson: "Maturidade não é acumular tudo, mas reconhecer o que realmente possui valor.",
+      practice: "Avalie o que você está preservando e o que precisa deixar de alimentar."
+    },
+    {
+      num: 11,
+      verse: "Ec 3:7a",
+      title: "Rasgar e coser",
+      cat: "emocoes",
+      catLabel: "Emoções & Relações",
+      summary: "No Oriente antigo, rasgar vestes marcava dor ou ruptura; coser aponta para reparo, recomposição e restauração onde há abertura.",
+      lesson: "Nem toda ruptura precisa ser definitiva, mas nem toda relação pode ser restaurada sem arrependimento e mudança.",
+      practice: "Quando houver possibilidade saudável de reconciliação, trabalhe pela restauração. Quando houver dano persistente, reconheça a necessidade de limites."
+    },
+    {
+      num: 12,
+      verse: "Ec 3:7b",
+      title: "Estar calado e falar",
+      cat: "posse",
+      catLabel: "Posse, Fala & Conflito",
+      summary: "O silêncio sábio evita conflitos precipitados (Pv 17:27; Tg 1:19), enquanto a palavra oportuna defende a verdade e a justiça.",
+      lesson: "Não fale apenas porque pode falar; fale quando suas palavras forem necessárias e apropriadas.",
+      practice: "Antes de responder, pergunte: minha fala é verdadeira? É necessária? É o momento adequado? Minha intenção é ajudar ou ferir?"
+    },
+    {
+      num: 13,
+      verse: "Ec 3:8a",
+      title: "Amar e aborrecer",
+      cat: "emocoes",
+      catLabel: "Emoções & Relações",
+      summary: "Não autoriza hostilidade gratuita contra pessoas (Mt 5:44), mas aponta para o contraste entre amar o bem e rejeitar o mal (Rm 12:9).",
+      lesson: "Amar não significa aprovar tudo.",
+      practice: "Trate as pessoas com dignidade, mas não negocie seus princípios para manter uma falsa harmonia."
+    },
+    {
+      num: 14,
+      verse: "Ec 3:8b",
+      title: "Guerra e paz",
+      cat: "posse",
+      catLabel: "Posse, Fala & Conflito",
+      summary: "Descreve a realidade histórica dos conflitos e períodos de paz; o chamado cristão busca a paz e a justiça sem covardia (Mt 5:9).",
+      lesson: "A paz não significa ausência de coragem; significa buscar o que é correto sem transformar o conflito em objetivo.",
+      practice: "Evite conflitos desnecessários, mas não abandone a verdade diante de situações que exigem posicionamento."
+    }
+  ];
+
+  const listEl = document.getElementById("polaritiesList");
+  const wheelEl = document.getElementById("polaritiesWheel");
+  const detailBox = document.getElementById("wheelDetailBox");
+  let activePairNum = 1;
+  let activeCat = "all";
+
+  function renderDetail(pair) {
+    detailBox.innerHTML = `
+      <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--gold);">${pair.num}º Par • ${pair.verse} • ${pair.catLabel}</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:var(--navy); margin:0.15rem 0 0.35rem;">${pair.title}</div>
+      <p style="font-size:0.88rem; margin-bottom:0.45rem;">${pair.summary}</p>
+      <p style="font-size:0.85rem; margin-bottom:0.25rem;"><strong>Lição espiritual:</strong> ${pair.lesson}</p>
+      <p style="font-size:0.85rem; margin-bottom:0;"><strong>Aplicação prática:</strong> ${pair.practice}</p>
+    `;
+  }
+
+  function polarToCartesian(cx, cy, r, angleDeg) {
+    const rad = ((angleDeg - 90) * Math.PI) / 180.0;
+    return {
+      x: cx + r * Math.cos(rad),
+      y: cy + r * Math.sin(rad)
+    };
+  }
+
+  function describeSlice(cx, cy, rOuter, rInner, startAngle, endAngle) {
+    const p1 = polarToCartesian(cx, cy, rOuter, endAngle);
+    const p2 = polarToCartesian(cx, cy, rOuter, startAngle);
+    const p3 = polarToCartesian(cx, cy, rInner, startAngle);
+    const p4 = polarToCartesian(cx, cy, rInner, endAngle);
+    const largeArc = endAngle - startAngle <= 180 ? "0" : "1";
+    return [
+      "M", p1.x, p1.y,
+      "A", rOuter, rOuter, 0, largeArc, 0, p2.x, p2.y,
+      "L", p3.x, p3.y,
+      "A", rInner, rInner, 0, largeArc, 1, p4.x, p4.y,
+      "Z"
+    ].join(" ");
+  }
+
+  function renderWheel() {
+    const cx = 210, cy = 210, rOuter = 192, rInner = 66;
+    const step = 360 / pairsData.length;
+    const palette = ["#1B2A4A", "#2A3E63", "#4A5D4E", "#B87D3B"];
+    let svgContent = "";
+
+    pairsData.forEach((pair, idx) => {
+      const start = idx * step;
+      const end = start + step;
+      const mid = start + step / 2;
+      const isSelected = pair.num === activePairNum;
+      const fill = isSelected ? "#9E4732" : palette[idx % palette.length];
+      const d = describeSlice(cx, cy, rOuter, rInner, start + 0.8, end - 0.8);
+      const labelPos = polarToCartesian(cx, cy, (rOuter + rInner) / 2, mid);
+
+      svgContent += `
+        <g class="wheel-slice" data-pair="${pair.num}" onclick="window.selectPolarPair(${pair.num})">
+          <path d="${d}" fill="${fill}" stroke="#FAF7F2" stroke-width="1.5" />
+          <text x="${labelPos.x}" y="${labelPos.y}" fill="#FFFFFF" font-size="11" font-weight="700" text-anchor="middle" dominant-baseline="central">${pair.num}</text>
+        </g>
+      `;
+    });
+
+    const current = pairsData.find(p => p.num === activePairNum) || pairsData[0];
+    svgContent += `
+      <circle cx="${cx}" cy="${cy}" r="${rInner - 2}" fill="#FAF7F2" stroke="#B87D3B" stroke-width="2" />
+      <text x="${cx}" y="${cy - 10}" text-anchor="middle" fill="#B87D3B" font-size="10" font-weight="700">PAR ${current.num}/14</text>
+      <text x="${cx}" y="${cy + 8}" text-anchor="middle" fill="#1B2A4A" font-size="10.5" font-weight="700">${current.verse}</text>
+      <text x="${cx}" y="${cy + 23}" text-anchor="middle" fill="#5A6370" font-size="8.5">Clique p/ ver</text>
+    `;
+
+    wheelEl.innerHTML = svgContent;
+  }
+
+  function renderList() {
+    const filtered = activeCat === "all"
+      ? pairsData
+      : pairsData.filter(p => p.cat === activeCat);
+
+    const ordinals = [
+      "Primeiro", "Segundo", "Terceiro", "Quarto", "Quinto", "Sexto", "Sétimo",
+      "Oitavo", "Nono", "Décimo", "Décimo primeiro", "Décimo segundo", "Décimo terceiro", "Décimo quarto"
+    ];
+
+    listEl.innerHTML = filtered.map(pair => {
+      const ord = ordinals[pair.num - 1] || `${pair.num}º`;
+      const isHi = pair.num === activePairNum;
+      return `
+        <div class="pair-card ${isHi ? "highlighted" : ""}" id="pair-card-${pair.num}" onclick="window.selectPolarPair(${pair.num}, false)">
+          <div class="pair-header">
+            <span class="pair-title">${ord} par — ${pair.title} <small style="font-family:'Plus Jakarta Sans',sans-serif; font-size:0.78rem; color:var(--gold);">(${pair.verse})</small></span>
+            <span class="pair-cat">${pair.catLabel}</span>
+          </div>
+          <p style="font-size:0.92rem; margin-bottom:0.35rem;">${pair.summary}</p>
+          <div class="pair-meta">
+            <div><strong>Lição espiritual:</strong> ${pair.lesson}</div>
+            <div style="margin-top:0.25rem;"><strong>Aplicação prática:</strong> ${pair.practice}</div>
+          </div>
+        </div>
+      `;
+    }).join("");
+  }
+
+  window.selectPolarPair = function (num, scrollToCard = false) {
+    activePairNum = num;
+    const pair = pairsData.find(p => p.num === num);
+    if (!pair) return;
+    renderWheel();
+    renderDetail(pair);
+    renderList();
+    if (scrollToCard) {
+      const card = document.getElementById("pair-card-" + num);
+      if (card) card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  };
+
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeCat = btn.getAttribute("data-cat");
+      renderList();
+    });
+  });
+
+  // Font size controls
+  let scale = 1;
+  const setScale = (val) => {
+    scale = Math.min(1.2, Math.max(0.88, Number(val.toFixed(2))));
+    document.documentElement.style.setProperty("--font-scale", scale);
+  };
+  document.getElementById("fontInc").addEventListener("click", () => setScale(scale + 0.06));
+  document.getElementById("fontDec").addEventListener("click", () => setScale(scale - 0.06));
+  document.getElementById("fontReset").addEventListener("click", () => setScale(1));
+
+  // Reading progress bar
+  const progressBar = document.getElementById("readingProgress");
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0;
+    progressBar.style.width = pct + "%";
+  }, { passive: true });
+
+  // Reflection notebook persistence + copy
+  const fields = [
+    { id: "refEstacao", label: "1. Estação atual" },
+    { id: "refAceitar", label: "2. O que preciso aceitar" },
+    { id: "refMudar", label: "3. O que preciso mudar" },
+    { id: "refPreservar", label: "4. O que preciso preservar" },
+    { id: "refAtitude", label: "5. Atitude concreta nesta semana" }
+  ];
+
+  const storageKey = "eclesiastes3_reflexoes_v1";
+  const statusEl = document.getElementById("copyStatus");
+
+  function saveNotebook() {
+    const payload = {};
+    fields.forEach(f => {
+      const el = document.getElementById(f.id);
+      if (el) payload[f.id] = el.value;
+    });
+    try { localStorage.setItem(storageKey, JSON.stringify(payload)); } catch (e) {}
+  }
+
+  function loadNotebook() {
+    try {
+      const raw = localStorage.getItem(storageKey);
+      if (!raw) return;
+      const payload = JSON.parse(raw);
+      fields.forEach(f => {
+        const el = document.getElementById(f.id);
+        if (el && typeof payload[f.id] === "string") el.value = payload[f.id];
+      });
+    } catch (e) {}
+  }
+
+  fields.forEach(f => {
+    const el = document.getElementById(f.id);
+    if (el) el.addEventListener("input", saveNotebook);
+  });
+
+  document.getElementById("btnCopiarReflexoes").addEventListener("click", async () => {
+    const lines = ["MEU MOMENTO DIANTE DE DEUS — ECLESIASTES 3", ""];
+    fields.forEach(f => {
+      const val = (document.getElementById(f.id)?.value || "").trim() || "(Não preenchido)";
+      lines.push(`${f.label}:
+${val}
+`);
+    });
+    const text = lines.join("
+").trim();
+
+    try {
+      await navigator.clipboard.writeText(text);
+      statusEl.textContent = "Reflexões copiadas para a área de transferência!";
+    } catch (err) {
+      const helper = document.createElement("textarea");
+      helper.value = text;
+      document.body.appendChild(helper);
+      helper.select();
+      document.execCommand("copy");
+      document.body.removeChild(helper);
+      statusEl.textContent = "Reflexões copiadas para a área de transferência!";
+    }
+    setTimeout(() => { statusEl.textContent = ""; }, 4000);
+  });
+
+  document.getElementById("btnLimparReflexoes").addEventListener("click", () => {
+    fields.forEach(f => {
+      const el = document.getElementById(f.id);
+      if (el) el.value = "";
+    });
+    saveNotebook();
+    statusEl.textContent = "Campos limpos.";
+    setTimeout(() => { statusEl.textContent = ""; }, 3000);
+  });
+
+  loadNotebook();
+  renderWheel();
+  renderDetail(pairsData[0]);
+  renderList();
+})();
+</script>
+</body>
+</html>
